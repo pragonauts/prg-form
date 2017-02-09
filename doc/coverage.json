@@ -1,0 +1,115 @@
+{
+  "coverage": "14.06%",
+  "expectCount": 64,
+  "actualCount": 9,
+  "files": {
+    "src/BaseInput.jsx": {
+      "expectCount": 25,
+      "actualCount": 3,
+      "undocumentLines": [
+        52,
+        64,
+        45,
+        58,
+        72,
+        28,
+        35,
+        154,
+        137,
+        33,
+        42,
+        31,
+        84,
+        79,
+        88,
+        221,
+        213,
+        203,
+        193,
+        171,
+        130,
+        37
+      ]
+    },
+    "src/Checkbox.jsx": {
+      "expectCount": 7,
+      "actualCount": 1,
+      "undocumentLines": [
+        32,
+        87,
+        64,
+        93,
+        72,
+        48
+      ]
+    },
+    "src/Control.jsx": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        7
+      ]
+    },
+    "src/Form.jsx": {
+      "expectCount": 12,
+      "actualCount": 3,
+      "undocumentLines": [
+        45,
+        31,
+        37,
+        98,
+        103,
+        34,
+        53,
+        57,
+        107
+      ]
+    },
+    "src/Input.jsx": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/LabeledControl.jsx": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        8
+      ]
+    },
+    "src/TextArea.jsx": {
+      "expectCount": 3,
+      "actualCount": 1,
+      "undocumentLines": [
+        51,
+        26
+      ]
+    },
+    "src/ValidatorForm.jsx": {
+      "expectCount": 7,
+      "actualCount": 0,
+      "undocumentLines": [
+        8,
+        10,
+        13,
+        47,
+        16,
+        26,
+        54
+      ]
+    },
+    "src/path.js": {
+      "expectCount": 7,
+      "actualCount": 0,
+      "undocumentLines": [
+        44,
+        85,
+        108,
+        120,
+        78,
+        11,
+        66
+      ]
+    }
+  }
+}

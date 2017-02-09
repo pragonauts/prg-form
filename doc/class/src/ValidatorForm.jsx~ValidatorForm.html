@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">ValidatorForm | Prg Form API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/BaseInput.jsx~BaseInput.html">BaseInput</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Checkbox.jsx~Checkbox.html">Checkbox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Form.jsx~Form.html">Form</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Input.jsx~Input.html">Input</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/TextArea.jsx~TextArea.html">TextArea</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ValidatorForm.jsx~ValidatorForm.html">ValidatorForm</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div class="header-notice">
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import ValidatorForm from &apos;<span><a href="file/src/ValidatorForm.jsx.html#lineNumber64">prg-form/src/ValidatorForm.jsx</a></span>&apos;</code></pre></div>
+  <span data-ice="access">public</span>
+  <span data-ice="kind">class</span>
+  
+  
+  
+  <span data-ice="source">| <span><a href="file/src/ValidatorForm.jsx.html#lineNumber64">source</a></span></span>
+</div>
+
+<div class="self-detail detail">
+  <h1 data-ice="name">ValidatorForm</h1>
+
+  
+
+  
+  
+  <div class="flat-list" data-ice="extendsChain"><h4>Extends:</h4><div><span>Component</span> &#x2192; ValidatorForm</div></div>
+  
+  
+  
+  
+  
+  
+
+  
+  
+  <div class="description" data-ice="description"><p>Form with integrated validation support</p>
+<ul>
+<li>use with <a href="https://github.com/pragonauts/prg-validator">Prg Validator</a> utility</li>
+</ul>
+<h2 id="proptypes">PropTypes</h2>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>type</th>
+<th>type signature</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>t</code></td>
+<td><code>function</code></td>
+<td><code>word =&gt; &apos;string&apos;</code></td>
+<td>translator provided to validator</td>
+</tr>
+<tr>
+<td><code>className</code></td>
+<td><code>string</code></td>
+<td></td>
+<td>form class name</td>
+</tr>
+<tr>
+<td><code>validator</code></td>
+<td><code>string</code></td>
+<td><strong>required</strong></td>
+<td>validator</td>
+</tr>
+<tr>
+<td><code>values</code></td>
+<td><code>object</code></td>
+<td></td>
+<td>values to fill the form</td>
+</tr>
+<tr>
+<td><code>onChange</code></td>
+<td><code>function</code></td>
+<td><code>(inputName, input) =&gt; {}</code>)</td>
+<td>form change handler</td>
+</tr>
+<tr>
+<td><code>onBeforeValidate</code></td>
+<td><code>function</code></td>
+<td><code>(values) =&gt; {}</code></td>
+<td>fired after submit, before validation</td>
+</tr>
+<tr>
+<td><code>onSubmit</code></td>
+<td><code>function</code></td>
+<td><code>(values) =&gt; {}</code></td>
+<td>fired after sucessfully validated submit</td>
+</tr>
+<tr>
+<td><code>onValidationFailed</code></td>
+<td><code>function</code></td>
+<td><code>(errors) =&gt; {}</code></td>
+<td>fired after unsucessfull validation</td>
+</tr>
+<tr>
+<td><code>validatorContext</code></td>
+<td><code>string</code></td>
+<td></td>
+<td>is provided as parameter to validator</td>
+</tr>
+</tbody>
+</table>
+<h2 id="validator-interface">Validator interface</h2>
+<ul>
+<li><strong>validateProp(<code>inputName: string, value: any,  ctx: string, data: object</code>) : Promise</strong><ul>
+<li>fired after <code>onChange</code> event</li>
+<li><code>inputName</code> - name of the input</li>
+<li><code>value</code> - current input value</li>
+<li><code>ctx</code> - passed <code>validatorContext</code></li>
+<li><code>data</code> - values of other inputs in form</li>
+</ul>
+</li>
+<li><strong>validate(<code>data: object, ctx: string</code>) : Promise</strong><ul>
+<li>fired after <code>onSubmit</code> event</li>
+<li><code>data</code> - whole form data</li>
+<li><code>ctx</code> - passed <code>validatorContext</code></li>
+</ul>
+</li>
+</ul>
+</div>
+  
+
+  
+
+  <div data-ice="exampleDocs">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">import { ValidatorForm, Input } from &apos;prg-form&apos;;
+import Validator from &apos;prg-validator&apos;;
+
+function MyForm ({ values }) {
+    const validator = new Validator();
+
+    validator.add(&apos;email&apos;)
+        .isEmail(&apos;Email should be valid&apos;);
+
+    return (
+        &lt;ValidatorForm
+            className=&quot;special-class&quot;
+            onSubmit={(values, form) =&gt; console.log(values)}
+            onChange={(input) =&gt; console.log(input.name, input.getValue())}
+            validator={validator}
+            values={values}
+        &gt;
+             &lt;Input type=&quot;email&quot; name=&quot;inputName&quot; label=&quot;Input Label&quot; /&gt;
+        &lt;/Form&gt;
+    );
+}</code></pre>
+    </div>
+</div>
+
+  
+
+  
+</div>
+
+
+
+
+
+<div data-ice="methodSummary"><h2>Method Summary</h2><table class="summary" data-ice="summary">
+  <thead><tr><td data-ice="title" colspan="3">Public Methods</td></tr></thead>
+  <tbody>
+  
+  <tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/src/ValidatorForm.jsx~ValidatorForm.html#instance-method-getValues">getValues</a></span></span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Returns form values</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+<div data-ice="methodDetails"><h2 data-ice="title">Public Methods</h2>
+
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-getValues">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span data-ice="name">getValues</span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/ValidatorForm.jsx.html#lineNumber110">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Returns form values</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

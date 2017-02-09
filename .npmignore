@@ -1,0 +1,10 @@
+# tests
+
+.vscode
+coverage
+node_modules
+test
+bin
+circle.yml
+typings
+doc
