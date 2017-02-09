@@ -1,7 +1,7 @@
 {
     "title": "Prg Form",
     "source": "./src",
-    "destination": "./doc",
+    "destination": "./docs",
     "access": ["public"],
     "autoPrivate": true,
     "unexportIdentifier": false,
