@@ -4,7 +4,11 @@
 coverage
 node_modules
 test
-bin
 circle.yml
 typings
-doc
+docs
+src
+karma.*
+karmaConfigurator.js
+mocha.opts
+.esdoc.json
