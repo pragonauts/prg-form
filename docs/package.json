@@ -1,10 +1,11 @@
 {
   "name": "prg-form",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React Form Components For Bulma",
-  "main": "index.js",
+  "main": "dist/main.js",
   "scripts": {
     "doc": "./node_modules/.bin/esdoc",
+    "dist": "node ./node_modules/babel-cli/bin/babel --no-comments --presets react,es2015 ./src/ -d ./dist/",
     "test": "npm run test:lint && npm run test:coverage && npm run test:coverage:threshold",
     "test:lint": "npm run test:lint:public && npm run test:lint:jsx",
     "test:lint:public": "node ./node_modules/eslint/bin/eslint.js --ext .js src test",
@@ -30,6 +31,7 @@
   },
   "homepage": "https://github.com/pragonauts/prg-form#readme",
   "devDependencies": {
+    "babel-cli": "^6.22.2",
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
     "babel-plugin-istanbul": "^4.0.0",

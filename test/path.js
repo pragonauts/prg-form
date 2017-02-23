@@ -3,9 +3,30 @@
  */
 
 import { assert } from 'chai';
-import { join, getValue, flat, pathToFormBrackets, shallowToDeep, shallowDiff } from '../src/path';
+import { join, getValue, flat, pathToFormBrackets, shallowToDeep, shallowDiff, createTree } from '../src/path';
 
 describe('path utility', function () {
+
+    describe('createTree()', function () {
+
+        it('should create tree with indexes', function () {
+            const res = createTree([], 'someArray[]');
+
+            assert.deepEqual(res, {
+                someArray: []
+            });
+        });
+
+        it('should create tree nicely', function () {
+            let res = createTree('foo', 'someArray[]');
+            res = createTree('bar', 'someArray[]', res);
+
+            assert.deepEqual(res, {
+                someArray: ['foo', 'bar']
+            });
+        });
+
+    });
 
     describe('join()', function () {
 

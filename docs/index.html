@@ -34,18 +34,21 @@
     
   <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/BaseInput.jsx~BaseInput.html">BaseInput</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Checkbox.jsx~Checkbox.html">Checkbox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/File.jsx~File.html">File</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Form.jsx~Form.html">Form</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Input.jsx~Input.html">Input</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/TextArea.jsx~TextArea.html">TextArea</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ValidatorForm.jsx~ValidatorForm.html">ValidatorForm</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-flat">flat</a></span></span></li>
 </ul>
 </div>
 </nav>
 
 <div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="prg-form">Prg Form</h1>
 <blockquote>
-<p>React Form components for Bulma.css</p>
+<p>React Form components for Bulma.css.</p>
 </blockquote>
+<p>There is <a href="http://pragonauts.github.io/prg-form">API Documentation</a>.</p>
 <h2 id="usage-within-form">Usage within Form</h2>
 <pre><code class="lang-javascript"><code class="source-code prettyprint">
 import { Form, Input } from &apos;prg-form&apos;;
@@ -77,37 +80,110 @@ import { Input } from &apos;prg-form&apos;;
 <h2 id="basic-form-components">Basic Form Components</h2>
 <ul>
 <li><p><strong>&lt;Input&gt;</strong></p>
-<pre><code class="lang-javascript"><code class="source-code prettyprint">import { Input } from &apos;prg-form&apos;;
+<pre><code class="lang-javascript"><code class="source-code prettyprint">  import { Input } from &apos;prg-form&apos;;
 
-&lt;Input
-    name=&quot;inputName&quot;
-    label=&quot;Input Label&quot;
-    type=&quot;password&quot;
-    maxLength={24}
-/&gt;</code>
+  &lt;Input
+      name=&quot;inputName&quot;
+      label=&quot;Input Label&quot;
+      type=&quot;password&quot;
+      maxLength={24}
+  /&gt;</code>
 </code></pre>
 </li>
 <li><p><strong>&lt;Checkbox&gt;</strong></p>
-<pre><code class="lang-javascript"><code class="source-code prettyprint">import { Checkbox } from &apos;prg-form&apos;;
+<pre><code class="lang-javascript"><code class="source-code prettyprint">  import { Checkbox } from &apos;prg-form&apos;;
 
-&lt;Checkbox
-    name=&quot;checkbox&quot;
-    defaultValue
-/&gt;</code>
+  &lt;Checkbox
+      name=&quot;checkbox&quot;
+      defaultValue
+  /&gt;</code>
 </code></pre>
 </li>
 <li><p><strong>&lt;TextArea&gt;</strong></p>
-<pre><code class="lang-javascript"><code class="source-code prettyprint">import { TextArea } from &apos;prg-form&apos;;
+<pre><code class="lang-javascript"><code class="source-code prettyprint">  import { TextArea } from &apos;prg-form&apos;;
 
-&lt;TextArea
-    name=&quot;inputName&quot;
-    readOnly
-    cols={30}
-    rows={7}
-/&gt;</code>
+  &lt;TextArea
+      name=&quot;inputName&quot;
+      readOnly
+      cols={30}
+      rows={7}
+  /&gt;</code>
+</code></pre>
+</li>
+<li><p><strong>&lt;File&gt;</strong></p>
+<p>  Is nice, because it works with native <code>&lt;File&gt;</code> objects.</p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">  import { File } from &apos;prg-form&apos;;
+
+  // as array of files
+  &lt;File
+      name=&quot;files[]&quot;
+      multiple
+  /&gt;
+
+  &lt;File
+      name=&quot;file&quot;
+  /&gt;</code>
 </code></pre>
 </li>
 </ul>
+<h2 id="advanced-using-the-file-upload">Advanced using the file upload</h2>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">import { File, ValidatorForm, flat } from &apos;prg-form&apos;;
+import Validator from &apos;prg-validator&apos;;
+
+export default function Component ({ onSendSuccess, onSendError }) {
+    const validator = new Validator();
+
+    validator.add(&apos;file&apos;)
+        .isFileMaxLength(&apos;shlould be smaller then 1Mb&apos;, &apos;1m&apos;)
+        .isFileMime(&apos;Should be an excel file&apos;, [
+            &apos;application/vnd.ms-excel&apos;,
+            &apos;application/msexcel&apos;,
+            &apos;application/x-msexcel&apos;,
+            &apos;application/x-ms-excel&apos;,
+            &apos;application/x-excel&apos;,
+            &apos;application/x-dos_ms_excel&apos;,
+            &apos;application/xls&apos;,
+            &apos;application/x-xls&apos;,
+            &apos;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet&apos;
+        ])
+        .toFileData();
+
+    const onSubmit = (formData) =&gt; {
+        const data = new FormData();
+
+        const flatData = flat(formData);
+
+        Object.keys(flatData)
+            .forEach((key) =&gt; {
+                data.append(key, flatData[key]);
+            });
+
+        this.request = $.ajax({
+            method: &apos;POST&apos;,
+            url: &apos;/api/upload&apos;,
+            dataType: &apos;json&apos;,   // JSON Response
+            processData: false, // Don&apos;t process the files
+            contentType: false, // Automatic content type
+            data,
+            success: responseData =&gt; onSendSuccess(responseData),
+            error: jqXHR =&gt; onSendError(jqXHR)
+        });
+    };
+
+    return (&lt;div className=&quot;container&quot;&gt;
+        &lt;ValidatorForm
+            validator={validator}
+            onSubmit={data =&gt; onSubmit(data)}
+        &gt;
+            &lt;File
+                name=&quot;file&quot;
+                label=&quot;Please put the Excel file here&quot;
+            /&gt;
+            &lt;button className=&quot;button&quot;&gt;Go&lt;/button&gt;
+        &lt;/ValidatorForm&gt;
+    &lt;/div&gt;);
+}</code>
+</code></pre>
 </div>
 </div>
 

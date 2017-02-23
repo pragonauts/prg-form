@@ -54,6 +54,10 @@ function createTree(value, path) {
     var object = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : undefined;
 
     if (typeof path === 'undefined') {
+        if (object && !Array.isArray(value)) {
+            object.push(value);
+            return object;
+        }
         return value;
     }
     var ret = object;
@@ -68,13 +72,23 @@ function createTree(value, path) {
     var key = attr;
 
     if (isArray) {
-        key = keyAsNum;
+        if (isArray) {
+            key = keyAsNum;
+        }
         if (ret === undefined) {
             ret = [];
         }
     } else if (ret === undefined) {
         ret = {};
     }
+
+    if (attr.match(/\[\]$/) && nextPath.length === 0) {
+        key = key.replace(/\[\]$/, '');
+        if (ret[key] === undefined) {
+            ret[key] = [];
+        }
+    }
+
     ret[key] = createTree(value, nextPath.join('.') || undefined, ret[key]);
     return ret;
 }
@@ -108,7 +122,7 @@ function flat(object) {
             key = path + '[' + i + ']';
             flat(elem, useFormBrackets, key, ret);
         });
-    } else if ((typeof object === 'undefined' ? 'undefined' : _typeof(object)) === 'object' && object !== null) {
+    } else if ((typeof object === 'undefined' ? 'undefined' : _typeof(object)) === 'object' && object !== null && object.constructor === Object) {
         Object.keys(object).forEach(function (attr) {
             if (useFormBrackets && path) {
                 key = path + '[' + attr + ']';

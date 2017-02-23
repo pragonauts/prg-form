@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../">
-  <title data-ice="title">Checkbox | Prg Form API Document</title>
+  <title data-ice="title">File | Prg Form API Document</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -45,23 +45,23 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Checkbox from &apos;<span><a href="file/src/Checkbox.jsx.html#lineNumber45">prg-form/src/Checkbox.jsx</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import File from &apos;<span><a href="file/src/File.jsx.html#lineNumber46">prg-form/src/File.jsx</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/src/Checkbox.jsx.html#lineNumber45">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/src/File.jsx.html#lineNumber46">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
-  <h1 data-ice="name">Checkbox</h1>
+  <h1 data-ice="name">File</h1>
 
   
 
   
   
-  <div class="flat-list" data-ice="extendsChain"><h4>Extends:</h4><div><span>Component</span> &#x2192; <span><a href="class/src/BaseInput.jsx~BaseInput.html">BaseInput</a></span> &#x2192; Checkbox</div></div>
+  <div class="flat-list" data-ice="extendsChain"><h4>Extends:</h4><div><span>Component</span> &#x2192; <span><a href="class/src/BaseInput.jsx~BaseInput.html">BaseInput</a></span> &#x2192; File</div></div>
   
   
   
@@ -71,8 +71,8 @@
 
   
   
-  <div class="description" data-ice="description"><p>Checkbox input
-In Addition to {BaseInput} has theese props:</p>
+  <div class="description" data-ice="description"><p>File upload component
+In addition to {BaseInput} has theese props:</p>
 <h2 id="proptypes">PropTypes</h2>
 <table>
 <thead>
@@ -97,12 +97,6 @@ In Addition to {BaseInput} has theese props:</p>
 <td>input label</td>
 </tr>
 <tr>
-<td><code>type</code></td>
-<td><code>string</code></td>
-<td><code>&quot;text&quot;</code></td>
-<td>input type</td>
-</tr>
-<tr>
 <td><code>className</code></td>
 <td><code>string</code></td>
 <td></td>
@@ -113,12 +107,6 @@ In Addition to {BaseInput} has theese props:</p>
 <td><code>string</code></td>
 <td></td>
 <td>surrounding paragraph class</td>
-</tr>
-<tr>
-<td><code>defaultValue</code></td>
-<td><code>any</code></td>
-<td></td>
-<td>is used, when input value is falsey</td>
 </tr>
 <tr>
 <td><code>value</code></td>
@@ -133,16 +121,16 @@ In Addition to {BaseInput} has theese props:</p>
 <td>fired, when input is changed</td>
 </tr>
 <tr>
-<td><code>disabled</code></td>
-<td><code>boolean</code></td>
-<td></td>
-<td>disable input</td>
+<td><code>onFocus</code></td>
+<td><code>function</code></td>
+<td><code>(input) =&gt; {}</code></td>
+<td>fired, when input is focused</td>
 </tr>
 <tr>
-<td><code>readOnly</code></td>
-<td><code>boolean</code></td>
-<td></td>
-<td>only read</td>
+<td><code>onBlur</code></td>
+<td><code>function</code></td>
+<td><code>(input) =&gt; {}</code></td>
+<td>fired, when input is blured</td>
 </tr>
 <tr>
 <td><code>required</code></td>
@@ -151,10 +139,16 @@ In Addition to {BaseInput} has theese props:</p>
 <td>input is required - HTML attribute</td>
 </tr>
 <tr>
-<td><code>checkValue</code></td>
+<td><code>iconBefore</code></td>
 <td><code>any</code></td>
 <td></td>
-<td>if provided, is used as value of checked input</td>
+<td>content shown before input</td>
+</tr>
+<tr>
+<td><code>multiple</code></td>
+<td><code>boolean</code></td>
+<td></td>
+<td>allows to set more files - the value will be an array</td>
 </tr>
 </tbody>
 </table>
@@ -168,15 +162,18 @@ In Addition to {BaseInput} has theese props:</p>
     
   <div class="example-doc" data-ice="exampleDoc">
       
-      <pre class="prettyprint source-code"><code data-ice="exampleCode">// works as boolean
-&lt;Checkbox
-    name=&quot;someBoolean&quot;
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">// as single file
+&lt;File
+    name=&quot;inputName&quot;
+    iconBefore={&lt;i className=&quot;fa fa-meetup&quot; /&gt;}
+    onChange={(file) =&gt; file instanceof File} // native File object
 /&gt;
 
-// works as `null|checkValue`
-&lt;Checkbox
-    name=&quot;someBoolean&quot;
-    checkValue=&quot;someString&quot;
+// as multiple files files
+&lt;File
+    name=&quot;inputName[]&quot; // do not forget to use with brackets
+    iconBefore={&lt;i className=&quot;fa fa-meetup&quot; /&gt;}
+    onChange={(files) =&gt; Array.isArray(files) &amp;&amp; files[0] instanceof File} // native File object
 /&gt;</code></pre>
     </div>
 </div>

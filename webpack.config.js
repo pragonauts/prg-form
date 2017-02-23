@@ -4,7 +4,7 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        main: './index.js'
+        main: './src/main.js'
     },
     output: {
         path: path.join(__dirname, 'public', 'assets'),

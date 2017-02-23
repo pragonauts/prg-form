@@ -12,6 +12,12 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
+    "prg-form/src/file.jsx~file",
+    "class/src/File.jsx~File.html",
+    "<span>File</span> <span class=\"search-result-import-path\">prg-form/src/File.jsx</span>",
+    "class"
+  ],
+  [
     "prg-form/src/form.jsx~form",
     "class/src/Form.jsx~Form.html",
     "<span>Form</span> <span class=\"search-result-import-path\">prg-form/src/Form.jsx</span>",
@@ -34,6 +40,12 @@ window.esdocSearchIndex = [
     "class/src/ValidatorForm.jsx~ValidatorForm.html",
     "<span>ValidatorForm</span> <span class=\"search-result-import-path\">prg-form/src/ValidatorForm.jsx</span>",
     "class"
+  ],
+  [
+    "prg-form/src/path.js~flat",
+    "function/index.html#static-function-flat",
+    "<span>flat</span> <span class=\"search-result-import-path\">prg-form/src/path.js</span>",
+    "function"
   ],
   [
     "builtinexternal/ecmascriptexternal.js~array",
@@ -402,6 +414,12 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "src/file.jsx",
+    "file/src/File.jsx.html",
+    "src/File.jsx",
+    "file"
+  ],
+  [
     "src/form.jsx",
     "file/src/Form.jsx.html",
     "src/Form.jsx",
@@ -448,6 +466,12 @@ window.esdocSearchIndex = [
     "class/src/ValidatorForm.jsx~ValidatorForm.html#instance-method-getValues",
     "src/ValidatorForm.jsx~ValidatorForm#getValues",
     "method"
+  ],
+  [
+    "src/main.js",
+    "file/src/main.js.html",
+    "src/main.js",
+    "file"
   ],
   [
     "src/path.js",

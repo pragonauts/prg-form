@@ -86,6 +86,7 @@ var BaseInput = function (_Component) {
                 this.context.inputWillUnmount(this);
             }
             this.mounted = false;
+            this.element = null;
         }
     }, {
         key: 'onChange',
@@ -178,7 +179,6 @@ var BaseInput = function (_Component) {
             var _props = this.props,
                 type = _props.type,
                 disabled = _props.disabled,
-                name = _props.name,
                 placeholder = _props.placeholder,
                 required = _props.required,
                 readOnly = _props.readOnly,
@@ -189,7 +189,7 @@ var BaseInput = function (_Component) {
             return _react2.default.createElement('input', {
                 id: this.id,
                 className: this.getInputClass(),
-                name: name,
+                name: this.name,
                 type: type,
                 placeholder: placeholder,
                 disabled: disabled,

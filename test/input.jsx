@@ -8,22 +8,29 @@ import { mount } from 'enzyme';
 import Input from '../src/Input';
 import Checkbox from '../src/Checkbox';
 import TextArea from '../src/TextArea';
+import File from '../src/File';
 
 function setValue (app, selector, value) {
     const input = app.find(selector);
     if (typeof value === 'boolean') {
         input.node.checked = value;
+    } else if (typeof value === 'object') {
+        if (value === null) {
+            input.node.value = '';
+        }
     } else {
         input.node.value = value;
     }
-    input.simulate('change', input);
+    input.simulate('change');
 }
 
 [
     { Elem: Input, inputSelector: 'input.input' },
+    { Elem: File, inputSelector: 'input.file', fooValue: null, barValue: {}, valueProp: 'filename', args: {} },
+    { Elem: File, inputSelector: 'input.file', fooValue: [], barValue: [], valueProp: 'filename', args: { multiple: true }, name: 'name[]' },
     { Elem: Checkbox, inputSelector: 'input.checkbox', fooValue: true, barValue: false, valueProp: 'checked' },
     { Elem: TextArea, inputSelector: 'textarea' }
-].forEach(({ Elem, inputSelector, fooValue = 'foo', barValue = 'bar', valueProp = 'value' }) => {
+].forEach(({ Elem, inputSelector, fooValue = 'foo', barValue = 'bar', valueProp = 'value', args = {}, name = 'name' }) => {
 
     describe(`<${Elem.name}>`, function () {
 
@@ -31,6 +38,7 @@ function setValue (app, selector, value) {
             const app = mount(
                 <Elem
                     name="name"
+                    {...args}
                 />
             );
 
@@ -43,11 +51,12 @@ function setValue (app, selector, value) {
             const app = mount(
                 <Elem
                     name="name"
+                    {...args}
                 />
             );
 
             assert.equal(typeof app.node.element, 'object');
-            assert.equal(app.node.name, 'name');
+            assert.equal(app.node.name, name);
         });
 
         it('should render label if provided', function () {
@@ -55,24 +64,13 @@ function setValue (app, selector, value) {
                 <Elem
                     name="name"
                     label="Foo"
+                    {...args}
                 />
             );
 
             assert.equal(app.find('p.control').length, 1, 'There should be one p.control');
             assert.equal(app.find('label').text(), 'Foo', 'There should be a label');
             assert.strictEqual(app.find(inputSelector).length, 1, `Elem not matches ${inputSelector}`);
-        });
-
-        it('should display default value', function () {
-            const app = mount(
-                <Elem
-                    name="name"
-                    defaultValue={fooValue}
-                />
-            );
-
-            assert(app.childAt(0).is(inputSelector), `Elem not matches ${inputSelector}`);
-            assert.strictEqual(app.childAt(0).prop(valueProp), fooValue);
         });
 
         it('element fires onChange event', function () {
@@ -83,6 +81,7 @@ function setValue (app, selector, value) {
                     name="name"
                     onChange={onChange}
                     value={fooValue}
+                    {...args}
                 />
             );
 
@@ -99,6 +98,7 @@ function setValue (app, selector, value) {
                 <Elem
                     name="name"
                     onFocus={onFocus}
+                    {...args}
                 />
             );
 
@@ -115,6 +115,7 @@ function setValue (app, selector, value) {
                 <Elem
                     name="name"
                     onBlur={onBlur}
+                    {...args}
                 />
             );
 
@@ -124,43 +125,100 @@ function setValue (app, selector, value) {
             assert.deepEqual(onBlur.firstCall.args, [app.node], 'name');
         });
 
-        it('should display value, when its set', function () {
-            const app = mount(
-                <Elem
-                    name="name"
-                />
-            );
+        if (Elem === File) {
 
-            app.node.setValue(fooValue);
-            assert.strictEqual(app.childAt(0).prop(valueProp), fooValue);
-        });
+            it('should work when file is set and should be able to reset input', function () {
+                const app = mount(
+                    <Elem
+                        name="name"
+                        {...args}
+                    />
+                );
 
-        it('should display default value, when the value is unset', function () {
-            const app = mount(
-                <Elem
-                    name="name"
-                    defaultValue={fooValue}
-                />
-            );
+                app.node.onChange({
+                    target: {
+                        files: [
+                            { size: 1, type: 'application/json' }
+                        ]
+                    }
+                });
 
-            app.node.setValue(barValue);
+                const val = app.node.getValue();
+                assert.strictEqual(typeof val, 'object');
 
-            let elementValue = fooValue === true ? false : fooValue;
-            assert.strictEqual(app.childAt(0).prop(valueProp), barValue);
-            assert.strictEqual(app.node.getValue(), barValue);
+                if (args.multiple) {
+                    assert(Array.isArray(val), 'should be array');
+                } else {
+                    assert(!Array.isArray(val), 'should not be array');
+                }
 
-            app.node.setValue(null);
+                app.node.setValue();
 
-            elementValue = fooValue === true ? true : fooValue;
-            assert.strictEqual(app.childAt(0).prop(valueProp), elementValue);
-            assert.strictEqual(app.node.getValue(), fooValue);
-        });
+                if (args.multiple) {
+                    assert(Array.isArray(app.node.getValue()), 'should be array');
+                    assert.strictEqual(app.node.getValue().length, 0, 'should be empty');
+                } else {
+                    assert.strictEqual(app.node.getValue(), null);
+                }
+            });
+
+
+        } else {
+            it('should display value, when its set', function () {
+                const app = mount(
+                    <Elem
+                        name="name"
+                        {...args}
+                    />
+                );
+
+                app.node.setValue(fooValue);
+                assert.strictEqual(app.childAt(0).prop(valueProp), fooValue);
+            });
+
+            it('should display default value, when the value is unset', function () {
+                const app = mount(
+                    <Elem
+                        name="name"
+                        defaultValue={fooValue}
+                        {...args}
+                    />
+                );
+
+                app.node.setValue(barValue);
+
+                let elementValue = fooValue === true ? false : fooValue;
+                assert.strictEqual(app.childAt(0).prop(valueProp), barValue);
+                assert.strictEqual(app.node.getValue(), barValue);
+
+                app.node.setValue(null);
+
+                elementValue = fooValue === true ? true : fooValue;
+                assert.strictEqual(app.childAt(0).prop(valueProp), elementValue);
+                assert.strictEqual(app.node.getValue(), fooValue);
+            });
+
+
+            it('should display default value', function () {
+                const app = mount(
+                    <Elem
+                        name="name"
+                        defaultValue={fooValue}
+                        {...args}
+                    />
+                );
+
+                assert(app.childAt(0).is(inputSelector), `Elem not matches ${inputSelector}`);
+                assert.strictEqual(app.childAt(0).prop(valueProp), fooValue);
+            });
+        }
 
         it('should pass class to input', function () {
             const app = mount(
                 <Elem
                     name="name"
                     className="inputclass"
+                    {...args}
                 />
             );
 
@@ -174,6 +232,7 @@ function setValue (app, selector, value) {
                 <Elem
                     name="name"
                     controlClass="container"
+                    {...args}
                 />
             );
 
@@ -187,6 +246,7 @@ function setValue (app, selector, value) {
                 <Elem
                     name="name"
                     controlClass="container"
+                    {...args}
                 />
             );
 
@@ -214,6 +274,7 @@ function setValue (app, selector, value) {
                     disabled
                     required
                     iconBefore={<i className="iconclass" />}
+                    {...args}
                 />
             );
 
@@ -237,6 +298,7 @@ function setValue (app, selector, value) {
             const app = mount(
                 <Elem
                     name="name"
+                    {...args}
                 />,
                 {
                     context: { inputWillMount, onChangeInput, inputWillUnmount },
@@ -258,14 +320,16 @@ function setValue (app, selector, value) {
             // data change
             if (typeof fooValue === 'boolean') {
                 setValue(app, inputSelector, true);
+            } else if (typeof fooValue === 'object') {
+                setValue(app, inputSelector, null);
             } else {
                 setValue(app, inputSelector, 'any');
             }
 
             // after data change
-            assert(inputWillMount.calledOnce);
-            assert(onChangeInput.calledOnce);
-            assert(!inputWillUnmount.called);
+            assert(inputWillMount.calledOnce, 'input should not remount');
+            assert(onChangeInput.calledOnce, 'onchange should be fired');
+            assert(!inputWillUnmount.called, 'unmount should not be called');
 
             assert.deepEqual(onChangeInput.firstCall.args, [app.node]);
 
@@ -286,6 +350,7 @@ function setValue (app, selector, value) {
                     <Elem
                         name="name"
                         checkValue="Foo"
+                        {...args}
                     />
                 );
 
@@ -304,6 +369,7 @@ function setValue (app, selector, value) {
                         name="name"
                         checkValue="Foo"
                         defaultValue="Foo"
+                        {...args}
                     />
                 );
 

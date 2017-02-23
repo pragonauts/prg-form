@@ -95,6 +95,7 @@ class BaseInput extends Component {
             this.context.inputWillUnmount(this);
         }
         this.mounted = false;
+        this.element = null;
     }
 
     onChange (e) {
@@ -197,13 +198,13 @@ class BaseInput extends Component {
     }
 
     renderInput () {
-        const { type, disabled, name, placeholder, required, readOnly, maxLength } = this.props;
+        const { type, disabled, placeholder, required, readOnly, maxLength } = this.props;
         const { value } = this.state;
 
         return (<input
             id={this.id}
             className={this.getInputClass()}
-            name={name}
+            name={this.name}
             type={type}
             placeholder={placeholder}
             disabled={disabled}

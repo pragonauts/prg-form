@@ -8,6 +8,7 @@ import { mount } from 'enzyme';
 import ValidatorForm from '../src/ValidatorForm';
 import Input from '../src/Input';
 import Checkbox from '../src/Checkbox';
+import File from '../src/File';
 
 function createResolver () {
     let resolve;
@@ -65,6 +66,7 @@ describe('<ValidatorForm>', function () {
             >
                 <Input name="texts[0].name" />
                 <Checkbox name="texts[0].bool" />
+                <File name="files" multiple />
             </ValidatorForm>
         );
     });
@@ -105,7 +107,7 @@ describe('<ValidatorForm>', function () {
             'texts[0].name',
             'Bar',
             null,
-            { texts: [{ name: 'Bar', bool: true }] }
+            { texts: [{ name: 'Bar', bool: true }], files: [] }
         ]);
 
         // fire the error
@@ -125,7 +127,7 @@ describe('<ValidatorForm>', function () {
                     'texts[0].bool',
                     false,
                     null,
-                    { texts: [{ name: 'Bar', bool: false }] }
+                    { texts: [{ name: 'Bar', bool: false }], files: [] }
                 ]);
 
                 // fire the error
@@ -146,7 +148,7 @@ describe('<ValidatorForm>', function () {
                     'texts[0].name',
                     'Right',
                     null,
-                    { texts: [{ name: 'Right', bool: false }] }
+                    { texts: [{ name: 'Right', bool: false }], files: [] }
                 ]);
 
                 // validate
@@ -164,7 +166,7 @@ describe('<ValidatorForm>', function () {
 
                 assert(validate.calledOnce);
                 assert.deepEqual(validate.firstCall.args, [
-                    { texts: [{ name: 'Right', bool: false }] },
+                    { texts: [{ name: 'Right', bool: false }], files: [] },
                     null,
                     true
                 ]);
@@ -201,7 +203,7 @@ describe('<ValidatorForm>', function () {
                 // onSubmit called
                 assert(this.onSubmit.calledOnce, 'onSubmit should be called');
                 assert.deepEqual(this.onSubmit.firstCall.args, [
-                    { texts: [{ name: 'Right', bool: false }] },
+                    { texts: [{ name: 'Right', bool: false }], files: [] },
                     this.app.find('Form').node
                 ]);
 
