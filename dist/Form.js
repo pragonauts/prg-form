@@ -56,7 +56,7 @@ var Form = function (_Component) {
 
             if (prevProps.values !== this.props.values) {
                 this.inputs.forEach(function (input, name) {
-                    input.setValue(_this3.props.values[name]);
+                    input.setValue((0, _path.getValue)(_this3.props.values, name));
                 });
             }
         }

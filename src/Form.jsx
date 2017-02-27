@@ -54,7 +54,7 @@ class Form extends Component {
     componentDidUpdate (prevProps) {
         if (prevProps.values !== this.props.values) {
             this.inputs.forEach((input, name) => {
-                input.setValue(this.props.values[name]);
+                input.setValue(getValue(this.props.values, name));
             });
         }
     }
