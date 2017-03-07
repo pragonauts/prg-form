@@ -45,8 +45,8 @@ var Checkbox = function (_BaseInput) {
         value: function _getCheckValue(checked) {
             var checkValue = this.props.checkValue;
 
-            if (checkValue === true) {
-                return !!checked;
+            if (typeof checkValue === 'boolean') {
+                return !!(checked ^ !checkValue);
             }
             return checked ? checkValue : null;
         }
@@ -54,12 +54,16 @@ var Checkbox = function (_BaseInput) {
         key: 'setValue',
         value: function setValue(input) {
             var value = void 0;
-            var useDefaultValue = typeof input === 'undefined' || input === null && typeof this.props.checkValue === 'boolean';
+            var _props = this.props,
+                defaultValue = _props.defaultValue,
+                checkValue = _props.checkValue;
+
+            var useDefaultValue = typeof input === 'undefined' || input === null && typeof checkValue === 'boolean';
 
             if (useDefaultValue) {
-                value = this.props.defaultValue;
+                value = this._getCheckValue(defaultValue === checkValue);
             } else {
-                value = this._getCheckValue(input === this.props.checkValue);
+                value = this._getCheckValue(input === checkValue);
             }
             if (this.mounted) {
                 this.setState({ value: value });
@@ -80,14 +84,14 @@ var Checkbox = function (_BaseInput) {
         value: function renderInput() {
             var _this2 = this;
 
-            var _props = this.props,
-                type = _props.type,
-                disabled = _props.disabled,
-                name = _props.name,
-                placeholder = _props.placeholder,
-                required = _props.required,
-                checkValue = _props.checkValue,
-                readOnly = _props.readOnly;
+            var _props2 = this.props,
+                type = _props2.type,
+                disabled = _props2.disabled,
+                name = _props2.name,
+                placeholder = _props2.placeholder,
+                required = _props2.required,
+                checkValue = _props2.checkValue,
+                readOnly = _props2.readOnly;
             var value = this.state.value;
 
 
