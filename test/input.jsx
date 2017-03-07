@@ -363,6 +363,20 @@ function setValue (app, selector, value) {
                 assert.strictEqual(app.node.getValue(), null, 'should be null otherwise');
             });
 
+            it('should have default null value after reset', function () {
+                const app = mount(
+                    <Elem
+                        name="name"
+                        checkValue="Foo"
+                        {...args}
+                    />
+                );
+
+                app.node.setValue();
+
+                assert.strictEqual(app.node.getValue(), null, 'should be null after run');
+            });
+
             it('should work with default value', function () {
                 const app = mount(
                     <Elem

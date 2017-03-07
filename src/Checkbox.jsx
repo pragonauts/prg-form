@@ -54,21 +54,22 @@ class Checkbox extends BaseInput {
 
     _getCheckValue (checked) {
         const { checkValue } = this.props;
-        if (checkValue === true) {
-            return !!checked;
+        if (typeof checkValue === 'boolean') {
+            return !!(checked ^ !checkValue); // eslint-disable-line
         }
         return checked ? checkValue : null;
     }
 
     setValue (input) {
         let value;
+        const { defaultValue, checkValue } = this.props;
         const useDefaultValue = typeof input === 'undefined'
-            || (input === null && typeof this.props.checkValue === 'boolean');
+            || (input === null && typeof checkValue === 'boolean');
 
         if (useDefaultValue) {
-            value = this.props.defaultValue;
+            value = this._getCheckValue(defaultValue === checkValue);
         } else {
-            value = this._getCheckValue(input === this.props.checkValue);
+            value = this._getCheckValue(input === checkValue);
         }
         if (this.mounted) {
             this.setState({ value });
