@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.flat = exports.File = exports.Checkbox = exports.TextArea = exports.Form = exports.ValidatorForm = exports.Input = undefined;
+exports.flat = exports.BaseInput = exports.File = exports.Checkbox = exports.TextArea = exports.Form = exports.ValidatorForm = exports.Input = undefined;
 
 var _Form = require('./Form');
 
@@ -29,6 +29,10 @@ var _File = require('./File');
 
 var _File2 = _interopRequireDefault(_File);
 
+var _BaseInput = require('./BaseInput');
+
+var _BaseInput2 = _interopRequireDefault(_BaseInput);
+
 var _path = require('./path');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -40,4 +44,5 @@ exports.Form = _Form2.default;
 exports.TextArea = _TextArea2.default;
 exports.Checkbox = _Checkbox2.default;
 exports.File = _File2.default;
+exports.BaseInput = _BaseInput2.default;
 exports.flat = _path.flat;
