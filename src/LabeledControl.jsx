@@ -12,7 +12,7 @@ function LabeledControl (props) {
         return <Control {...props} />;
     }
 
-    return (<div className="control">
+    return (<div className="field">
         <label className="label" htmlFor={id}>{label}</label>
         <Control {...props} />
     </div>);

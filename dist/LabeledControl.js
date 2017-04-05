@@ -25,7 +25,7 @@ function LabeledControl(props) {
 
     return _react2.default.createElement(
         'div',
-        { className: 'control' },
+        { className: 'field' },
         _react2.default.createElement(
             'label',
             { className: 'label', htmlFor: id },
