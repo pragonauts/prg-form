@@ -12,6 +12,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _Form = require('./Form');
 
 var _Form2 = _interopRequireDefault(_Form);
@@ -119,18 +123,18 @@ var ValidatorForm = function (_Component) {
 }(_react.Component);
 
 ValidatorForm.propTypes = {
-    t: _react.PropTypes.func,
-    className: _react.PropTypes.string,
-    children: _react.PropTypes.oneOfType([_react.PropTypes.any]),
-    values: _react.PropTypes.objectOf(_react.PropTypes.any),
-    onSubmit: _react.PropTypes.func,
-    onChange: _react.PropTypes.func,
-    onBeforeValidate: _react.PropTypes.func,
-    onValidationFailed: _react.PropTypes.func,
-    validatorContext: _react.PropTypes.string,
-    validator: _react.PropTypes.shape({
-        validateProp: _react.PropTypes.func,
-        validate: _react.PropTypes.func
+    t: _propTypes2.default.func,
+    className: _propTypes2.default.string,
+    children: _propTypes2.default.oneOfType([_propTypes2.default.any]),
+    values: _propTypes2.default.objectOf(_propTypes2.default.any),
+    onSubmit: _propTypes2.default.func,
+    onChange: _propTypes2.default.func,
+    onBeforeValidate: _propTypes2.default.func,
+    onValidationFailed: _propTypes2.default.func,
+    validatorContext: _propTypes2.default.string,
+    validator: _propTypes2.default.shape({
+        validateProp: _propTypes2.default.func,
+        validate: _propTypes2.default.func
     }).isRequired
 };
 

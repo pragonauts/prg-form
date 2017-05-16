@@ -8,6 +8,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _Control = require('./Control');
 
 var _Control2 = _interopRequireDefault(_Control);
@@ -36,8 +40,8 @@ function LabeledControl(props) {
 }
 
 LabeledControl.propTypes = {
-    label: _react.PropTypes.oneOfType([_react.PropTypes.any]),
-    id: _react.PropTypes.string
+    label: _propTypes2.default.oneOfType([_propTypes2.default.any]),
+    id: _propTypes2.default.string
 };
 
 LabeledControl.defaultProps = {

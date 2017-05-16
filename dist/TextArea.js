@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _BaseInput2 = require('./BaseInput');
 
 var _BaseInput3 = _interopRequireDefault(_BaseInput2);
@@ -80,8 +84,8 @@ var TextArea = function (_BaseInput) {
 }(_BaseInput3.default);
 
 TextArea.propTypes = Object.assign({}, _BaseInput3.default.propTypes, {
-    cols: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.number]),
-    rows: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.number])
+    cols: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
+    rows: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
 });
 
 TextArea.defaultProps = Object.assign({}, _BaseInput3.default.defaultProps, {

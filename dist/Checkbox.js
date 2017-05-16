@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _BaseInput2 = require('./BaseInput');
 
 var _BaseInput3 = _interopRequireDefault(_BaseInput2);
@@ -155,7 +159,7 @@ var Checkbox = function (_BaseInput) {
 }(_BaseInput3.default);
 
 Checkbox.propTypes = Object.assign({}, _BaseInput3.default.propTypes, {
-    checkValue: _react.PropTypes.oneOfType([_react.PropTypes.any])
+    checkValue: _propTypes2.default.oneOfType([_propTypes2.default.any])
 });
 
 Checkbox.defaultProps = Object.assign({}, _BaseInput3.default.defaultProps, {

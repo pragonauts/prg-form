@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _LabeledControl = require('./LabeledControl');
 
 var _LabeledControl2 = _interopRequireDefault(_LabeledControl);
@@ -275,24 +279,24 @@ var BaseInput = function (_Component) {
 }(_react.Component);
 
 BaseInput.propTypes = {
-    name: _react.PropTypes.string.isRequired,
-    placeholder: _react.PropTypes.string,
-    label: _react.PropTypes.oneOfType([_react.PropTypes.any]),
-    type: _react.PropTypes.string,
-    className: _react.PropTypes.string,
-    controlClass: _react.PropTypes.string,
-    disabled: _react.PropTypes.bool,
-    defaultInputClass: _react.PropTypes.string,
-    defaultValue: _react.PropTypes.oneOfType([_react.PropTypes.any]),
-    autofocus: _react.PropTypes.bool,
-    required: _react.PropTypes.bool,
-    readOnly: _react.PropTypes.bool,
-    iconBefore: _react.PropTypes.oneOfType([_react.PropTypes.any]),
-    value: _react.PropTypes.oneOfType([_react.PropTypes.any]),
-    onChange: _react.PropTypes.func,
-    onBlur: _react.PropTypes.func,
-    onFocus: _react.PropTypes.func,
-    maxLength: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.number])
+    name: _propTypes2.default.string.isRequired,
+    placeholder: _propTypes2.default.string,
+    label: _propTypes2.default.oneOfType([_propTypes2.default.any]),
+    type: _propTypes2.default.string,
+    className: _propTypes2.default.string,
+    controlClass: _propTypes2.default.string,
+    disabled: _propTypes2.default.bool,
+    defaultInputClass: _propTypes2.default.string,
+    defaultValue: _propTypes2.default.oneOfType([_propTypes2.default.any]),
+    autofocus: _propTypes2.default.bool,
+    required: _propTypes2.default.bool,
+    readOnly: _propTypes2.default.bool,
+    iconBefore: _propTypes2.default.oneOfType([_propTypes2.default.any]),
+    value: _propTypes2.default.oneOfType([_propTypes2.default.any]),
+    onChange: _propTypes2.default.func,
+    onBlur: _propTypes2.default.func,
+    onFocus: _propTypes2.default.func,
+    maxLength: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
 };
 
 BaseInput.defaultProps = {
@@ -316,9 +320,9 @@ BaseInput.defaultProps = {
 };
 
 BaseInput.contextTypes = {
-    inputWillMount: _react.PropTypes.func,
-    onChangeInput: _react.PropTypes.func,
-    inputWillUnmount: _react.PropTypes.func
+    inputWillMount: _propTypes2.default.func,
+    onChangeInput: _propTypes2.default.func,
+    inputWillUnmount: _propTypes2.default.func
 };
 
 exports.default = BaseInput;

@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _path = require('./path');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -129,17 +133,17 @@ var Form = function (_Component) {
 }(_react.Component);
 
 Form.childContextTypes = {
-    inputWillMount: _react.PropTypes.func,
-    onChangeInput: _react.PropTypes.func,
-    inputWillUnmount: _react.PropTypes.func
+    inputWillMount: _propTypes2.default.func,
+    onChangeInput: _propTypes2.default.func,
+    inputWillUnmount: _propTypes2.default.func
 };
 
 Form.propTypes = {
-    className: _react.PropTypes.string,
-    values: _react.PropTypes.objectOf(_react.PropTypes.any),
-    children: _react.PropTypes.oneOfType([_react.PropTypes.any]),
-    onChange: _react.PropTypes.func,
-    onSubmit: _react.PropTypes.func
+    className: _propTypes2.default.string,
+    values: _propTypes2.default.objectOf(_propTypes2.default.any),
+    children: _propTypes2.default.oneOfType([_propTypes2.default.any]),
+    onChange: _propTypes2.default.func,
+    onSubmit: _propTypes2.default.func
 };
 
 Form.defaultProps = {

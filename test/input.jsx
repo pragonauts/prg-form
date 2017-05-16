@@ -2,7 +2,8 @@
  * @author David Menger
  */
 
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { assert } from 'chai';
 import { mount } from 'enzyme';
 import Input from '../src/Input';
