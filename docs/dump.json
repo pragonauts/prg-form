@@ -25,7 +25,7 @@
     "examples": [
       "<Input\n    name=\"inputs[0].name\"\n    label=\"Text of label\"\n    className=\"input-class\"\n    controlClass=\"control-container-class\"\n    disabled\n    required\n    autofocus\n    readOnly\n    defaultValue=\"some value\"\n/>"
     ],
-    "lineNumber": 47,
+    "lineNumber": 48,
     "unknown": [
       {
         "tagName": "@class",
@@ -48,7 +48,7 @@
     "longname": "src/BaseInput.jsx~BaseInput#constructor",
     "access": null,
     "description": null,
-    "lineNumber": 49,
+    "lineNumber": 50,
     "undocument": true,
     "unknown": [
       {
@@ -80,7 +80,7 @@
     "longname": "src/BaseInput.jsx~BaseInput#name",
     "access": null,
     "description": null,
-    "lineNumber": 52,
+    "lineNumber": 53,
     "undocument": true,
     "unknown": [
       {
@@ -103,7 +103,7 @@
     "longname": "src/BaseInput.jsx~BaseInput#id",
     "access": null,
     "description": null,
-    "lineNumber": 54,
+    "lineNumber": 55,
     "undocument": true,
     "unknown": [
       {
@@ -126,7 +126,7 @@
     "longname": "src/BaseInput.jsx~BaseInput#element",
     "access": null,
     "description": null,
-    "lineNumber": 56,
+    "lineNumber": 57,
     "undocument": true,
     "unknown": [
       {
@@ -149,7 +149,7 @@
     "longname": "src/BaseInput.jsx~BaseInput#state",
     "access": null,
     "description": null,
-    "lineNumber": 58,
+    "lineNumber": 59,
     "undocument": true,
     "unknown": [
       {
@@ -172,7 +172,7 @@
     "longname": "src/BaseInput.jsx~BaseInput#mounted",
     "access": null,
     "description": null,
-    "lineNumber": 63,
+    "lineNumber": 64,
     "undocument": true,
     "unknown": [
       {
@@ -188,35 +188,14 @@
   },
   {
     "__docId__": 8,
-    "kind": "method",
-    "name": "componentWillMount",
+    "kind": "member",
+    "name": "inReset",
     "memberof": "src/BaseInput.jsx~BaseInput",
-    "generator": false,
-    "async": false,
     "static": false,
-    "longname": "src/BaseInput.jsx~BaseInput#componentWillMount",
+    "longname": "src/BaseInput.jsx~BaseInput#inReset",
     "access": null,
     "description": null,
     "lineNumber": 66,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "params": []
-  },
-  {
-    "__docId__": 9,
-    "kind": "member",
-    "name": "mounted",
-    "memberof": "src/BaseInput.jsx~BaseInput",
-    "static": false,
-    "longname": "src/BaseInput.jsx~BaseInput#mounted",
-    "access": null,
-    "description": null,
-    "lineNumber": 67,
     "undocument": true,
     "unknown": [
       {
@@ -231,17 +210,17 @@
     }
   },
   {
-    "__docId__": 10,
+    "__docId__": 9,
     "kind": "method",
-    "name": "componentDidMount",
+    "name": "componentWillMount",
     "memberof": "src/BaseInput.jsx~BaseInput",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "src/BaseInput.jsx~BaseInput#componentDidMount",
+    "longname": "src/BaseInput.jsx~BaseInput#componentWillMount",
     "access": null,
     "description": null,
-    "lineNumber": 73,
+    "lineNumber": 69,
     "undocument": true,
     "unknown": [
       {
@@ -252,7 +231,74 @@
     "params": []
   },
   {
+    "__docId__": 10,
+    "kind": "member",
+    "name": "mounted",
+    "memberof": "src/BaseInput.jsx~BaseInput",
+    "static": false,
+    "longname": "src/BaseInput.jsx~BaseInput#mounted",
+    "access": null,
+    "description": null,
+    "lineNumber": 70,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "boolean"
+      ]
+    }
+  },
+  {
     "__docId__": 11,
+    "kind": "method",
+    "name": "componentDidMount",
+    "memberof": "src/BaseInput.jsx~BaseInput",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/BaseInput.jsx~BaseInput#componentDidMount",
+    "access": null,
+    "description": null,
+    "lineNumber": 76,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": []
+  },
+  {
+    "__docId__": 12,
+    "kind": "member",
+    "name": "inReset",
+    "memberof": "src/BaseInput.jsx~BaseInput",
+    "static": false,
+    "longname": "src/BaseInput.jsx~BaseInput#inReset",
+    "access": null,
+    "description": null,
+    "lineNumber": 80,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "boolean"
+      ]
+    }
+  },
+  {
+    "__docId__": 13,
     "kind": "method",
     "name": "componentWillReceiveProps",
     "memberof": "src/BaseInput.jsx~BaseInput",
@@ -262,7 +308,7 @@
     "longname": "src/BaseInput.jsx~BaseInput#componentWillReceiveProps",
     "access": null,
     "description": null,
-    "lineNumber": 79,
+    "lineNumber": 83,
     "undocument": true,
     "unknown": [
       {
@@ -280,7 +326,7 @@
     ]
   },
   {
-    "__docId__": 12,
+    "__docId__": 14,
     "kind": "method",
     "name": "componentDidUpdate",
     "memberof": "src/BaseInput.jsx~BaseInput",
@@ -290,7 +336,7 @@
     "longname": "src/BaseInput.jsx~BaseInput#componentDidUpdate",
     "access": null,
     "description": null,
-    "lineNumber": 85,
+    "lineNumber": 89,
     "undocument": true,
     "unknown": [
       {
@@ -314,36 +360,15 @@
     ]
   },
   {
-    "__docId__": 13,
-    "kind": "method",
-    "name": "componentWillUnmount",
-    "memberof": "src/BaseInput.jsx~BaseInput",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "src/BaseInput.jsx~BaseInput#componentWillUnmount",
-    "access": null,
-    "description": null,
-    "lineNumber": 93,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "params": []
-  },
-  {
-    "__docId__": 14,
+    "__docId__": 15,
     "kind": "member",
-    "name": "mounted",
+    "name": "inReset",
     "memberof": "src/BaseInput.jsx~BaseInput",
     "static": false,
-    "longname": "src/BaseInput.jsx~BaseInput#mounted",
+    "longname": "src/BaseInput.jsx~BaseInput#inReset",
     "access": null,
     "description": null,
-    "lineNumber": 97,
+    "lineNumber": 96,
     "undocument": true,
     "unknown": [
       {
@@ -358,7 +383,51 @@
     }
   },
   {
-    "__docId__": 15,
+    "__docId__": 16,
+    "kind": "method",
+    "name": "componentWillUnmount",
+    "memberof": "src/BaseInput.jsx~BaseInput",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/BaseInput.jsx~BaseInput#componentWillUnmount",
+    "access": null,
+    "description": null,
+    "lineNumber": 99,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": []
+  },
+  {
+    "__docId__": 17,
+    "kind": "member",
+    "name": "mounted",
+    "memberof": "src/BaseInput.jsx~BaseInput",
+    "static": false,
+    "longname": "src/BaseInput.jsx~BaseInput#mounted",
+    "access": null,
+    "description": null,
+    "lineNumber": 103,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "boolean"
+      ]
+    }
+  },
+  {
+    "__docId__": 18,
     "kind": "member",
     "name": "element",
     "memberof": "src/BaseInput.jsx~BaseInput",
@@ -366,7 +435,7 @@
     "longname": "src/BaseInput.jsx~BaseInput#element",
     "access": null,
     "description": null,
-    "lineNumber": 98,
+    "lineNumber": 104,
     "undocument": true,
     "unknown": [
       {
@@ -381,7 +450,7 @@
     }
   },
   {
-    "__docId__": 16,
+    "__docId__": 19,
     "kind": "method",
     "name": "onChange",
     "memberof": "src/BaseInput.jsx~BaseInput",
@@ -391,7 +460,7 @@
     "longname": "src/BaseInput.jsx~BaseInput#onChange",
     "access": null,
     "description": null,
-    "lineNumber": 101,
+    "lineNumber": 107,
     "undocument": true,
     "unknown": [
       {
@@ -409,7 +478,7 @@
     ]
   },
   {
-    "__docId__": 17,
+    "__docId__": 20,
     "kind": "method",
     "name": "onBlur",
     "memberof": "src/BaseInput.jsx~BaseInput",
@@ -419,7 +488,7 @@
     "longname": "src/BaseInput.jsx~BaseInput#onBlur",
     "access": null,
     "description": null,
-    "lineNumber": 106,
+    "lineNumber": 112,
     "undocument": true,
     "unknown": [
       {
@@ -430,7 +499,7 @@
     "params": []
   },
   {
-    "__docId__": 18,
+    "__docId__": 21,
     "kind": "method",
     "name": "onFocus",
     "memberof": "src/BaseInput.jsx~BaseInput",
@@ -440,7 +509,7 @@
     "longname": "src/BaseInput.jsx~BaseInput#onFocus",
     "access": null,
     "description": null,
-    "lineNumber": 110,
+    "lineNumber": 116,
     "undocument": true,
     "unknown": [
       {
@@ -451,7 +520,7 @@
     "params": []
   },
   {
-    "__docId__": 19,
+    "__docId__": 22,
     "kind": "method",
     "name": "setValue",
     "memberof": "src/BaseInput.jsx~BaseInput",
@@ -462,9 +531,9 @@
     "access": null,
     "description": "Set new value to input",
     "examples": [
-      "// reset to default value\ninput.setValue()\n\n// set value\ninput.setValue('another');"
+      "// set default value\ninput.setValue()\n\n// set value\ninput.setValue('another');"
     ],
-    "lineNumber": 128,
+    "lineNumber": 134,
     "unknown": [
       {
         "tagName": "@returns",
@@ -497,7 +566,7 @@
     }
   },
   {
-    "__docId__": 20,
+    "__docId__": 23,
     "kind": "method",
     "name": "getValue",
     "memberof": "src/BaseInput.jsx~BaseInput",
@@ -507,7 +576,7 @@
     "longname": "src/BaseInput.jsx~BaseInput#getValue",
     "access": null,
     "description": "Returns input value",
-    "lineNumber": 148,
+    "lineNumber": 154,
     "unknown": [
       {
         "tagName": "@returns",
@@ -529,7 +598,7 @@
     }
   },
   {
-    "__docId__": 21,
+    "__docId__": 24,
     "kind": "method",
     "name": "setError",
     "memberof": "src/BaseInput.jsx~BaseInput",
@@ -539,7 +608,7 @@
     "longname": "src/BaseInput.jsx~BaseInput#setError",
     "access": null,
     "description": "Show error",
-    "lineNumber": 159,
+    "lineNumber": 165,
     "unknown": [
       {
         "tagName": "@memberOf",
@@ -562,7 +631,7 @@
     ]
   },
   {
-    "__docId__": 22,
+    "__docId__": 25,
     "kind": "method",
     "name": "getInputClass",
     "memberof": "src/BaseInput.jsx~BaseInput",
@@ -572,7 +641,7 @@
     "longname": "src/BaseInput.jsx~BaseInput#getInputClass",
     "access": null,
     "description": null,
-    "lineNumber": 166,
+    "lineNumber": 172,
     "undocument": true,
     "unknown": [
       {
@@ -588,7 +657,7 @@
     }
   },
   {
-    "__docId__": 23,
+    "__docId__": 26,
     "kind": "method",
     "name": "getControlClass",
     "memberof": "src/BaseInput.jsx~BaseInput",
@@ -598,82 +667,7 @@
     "longname": "src/BaseInput.jsx~BaseInput#getControlClass",
     "access": null,
     "description": null,
-    "lineNumber": 183,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "params": [],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 24,
-    "kind": "method",
-    "name": "renderInput",
-    "memberof": "src/BaseInput.jsx~BaseInput",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "src/BaseInput.jsx~BaseInput#renderInput",
-    "access": null,
-    "description": null,
-    "lineNumber": 200,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "params": [],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 25,
-    "kind": "member",
-    "name": "element",
-    "memberof": "src/BaseInput.jsx~BaseInput",
-    "static": false,
-    "longname": "src/BaseInput.jsx~BaseInput#element",
-    "access": null,
-    "description": null,
-    "lineNumber": 215,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 26,
-    "kind": "method",
-    "name": "renderIconBefore",
-    "memberof": "src/BaseInput.jsx~BaseInput",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "src/BaseInput.jsx~BaseInput#renderIconBefore",
-    "access": null,
-    "description": null,
-    "lineNumber": 222,
+    "lineNumber": 189,
     "undocument": true,
     "unknown": [
       {
@@ -691,64 +685,158 @@
   {
     "__docId__": 27,
     "kind": "method",
+    "name": "resetValue",
+    "memberof": "src/BaseInput.jsx~BaseInput",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/BaseInput.jsx~BaseInput#resetValue",
+    "access": null,
+    "description": "Reset and clean the validation errors",
+    "lineNumber": 211,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "value",
+        "description": "leave empty to reset to default value"
+      }
+    ]
+  },
+  {
+    "__docId__": 28,
+    "kind": "member",
+    "name": "inReset",
+    "memberof": "src/BaseInput.jsx~BaseInput",
+    "static": false,
+    "longname": "src/BaseInput.jsx~BaseInput#inReset",
+    "access": null,
+    "description": null,
+    "lineNumber": 212,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "boolean"
+      ]
+    }
+  },
+  {
+    "__docId__": 29,
+    "kind": "member",
+    "name": "inReset",
+    "memberof": "src/BaseInput.jsx~BaseInput",
+    "static": false,
+    "longname": "src/BaseInput.jsx~BaseInput#inReset",
+    "access": null,
+    "description": null,
+    "lineNumber": 214,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "boolean"
+      ]
+    }
+  },
+  {
+    "__docId__": 30,
+    "kind": "method",
+    "name": "renderInput",
+    "memberof": "src/BaseInput.jsx~BaseInput",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/BaseInput.jsx~BaseInput#renderInput",
+    "access": null,
+    "description": null,
+    "lineNumber": 218,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 31,
+    "kind": "member",
+    "name": "element",
+    "memberof": "src/BaseInput.jsx~BaseInput",
+    "static": false,
+    "longname": "src/BaseInput.jsx~BaseInput#element",
+    "access": null,
+    "description": null,
+    "lineNumber": 233,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 32,
+    "kind": "method",
+    "name": "renderIconBefore",
+    "memberof": "src/BaseInput.jsx~BaseInput",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/BaseInput.jsx~BaseInput#renderIconBefore",
+    "access": null,
+    "description": null,
+    "lineNumber": 240,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 33,
+    "kind": "method",
     "name": "renderIcon",
     "memberof": "src/BaseInput.jsx~BaseInput",
     "generator": false,
     "async": false,
     "static": false,
     "longname": "src/BaseInput.jsx~BaseInput#renderIcon",
-    "access": null,
-    "description": null,
-    "lineNumber": 232,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "params": [],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 28,
-    "kind": "method",
-    "name": "renderError",
-    "memberof": "src/BaseInput.jsx~BaseInput",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "src/BaseInput.jsx~BaseInput#renderError",
-    "access": null,
-    "description": null,
-    "lineNumber": 242,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "params": [],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 29,
-    "kind": "method",
-    "name": "render",
-    "memberof": "src/BaseInput.jsx~BaseInput",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "src/BaseInput.jsx~BaseInput#render",
     "access": null,
     "description": null,
     "lineNumber": 250,
@@ -767,7 +855,59 @@
     }
   },
   {
-    "__docId__": 30,
+    "__docId__": 34,
+    "kind": "method",
+    "name": "renderError",
+    "memberof": "src/BaseInput.jsx~BaseInput",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/BaseInput.jsx~BaseInput#renderError",
+    "access": null,
+    "description": null,
+    "lineNumber": 260,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 35,
+    "kind": "method",
+    "name": "render",
+    "memberof": "src/BaseInput.jsx~BaseInput",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/BaseInput.jsx~BaseInput#render",
+    "access": null,
+    "description": null,
+    "lineNumber": 268,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 36,
     "kind": "file",
     "name": "src/Checkbox.jsx",
     "content": "",
@@ -778,7 +918,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 31,
+    "__docId__": 37,
     "kind": "class",
     "name": "Checkbox",
     "memberof": "src/Checkbox.jsx",
@@ -792,7 +932,7 @@
     "examples": [
       "// works as boolean\n<Checkbox\n    name=\"someBoolean\"\n/>\n\n// works as `null|checkValue`\n<Checkbox\n    name=\"someBoolean\"\n    checkValue=\"someString\"\n/>"
     ],
-    "lineNumber": 45,
+    "lineNumber": 46,
     "unknown": [
       {
         "tagName": "@class",
@@ -805,7 +945,7 @@
     ]
   },
   {
-    "__docId__": 32,
+    "__docId__": 38,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/Checkbox.jsx~Checkbox",
@@ -815,7 +955,7 @@
     "longname": "src/Checkbox.jsx~Checkbox#constructor",
     "access": null,
     "description": null,
-    "lineNumber": 47,
+    "lineNumber": 48,
     "undocument": true,
     "unknown": [
       {
@@ -839,7 +979,7 @@
     ]
   },
   {
-    "__docId__": 33,
+    "__docId__": 39,
     "kind": "method",
     "name": "_getCheckValue",
     "memberof": "src/Checkbox.jsx~Checkbox",
@@ -849,7 +989,7 @@
     "longname": "src/Checkbox.jsx~Checkbox#_getCheckValue",
     "access": null,
     "description": null,
-    "lineNumber": 55,
+    "lineNumber": 56,
     "undocument": true,
     "unknown": [
       {
@@ -872,7 +1012,7 @@
     }
   },
   {
-    "__docId__": 34,
+    "__docId__": 40,
     "kind": "method",
     "name": "setValue",
     "memberof": "src/Checkbox.jsx~Checkbox",
@@ -882,7 +1022,7 @@
     "longname": "src/Checkbox.jsx~Checkbox#setValue",
     "access": null,
     "description": null,
-    "lineNumber": 63,
+    "lineNumber": 64,
     "undocument": true,
     "unknown": [
       {
@@ -905,7 +1045,7 @@
     }
   },
   {
-    "__docId__": 35,
+    "__docId__": 41,
     "kind": "method",
     "name": "onChange",
     "memberof": "src/Checkbox.jsx~Checkbox",
@@ -915,7 +1055,7 @@
     "longname": "src/Checkbox.jsx~Checkbox#onChange",
     "access": null,
     "description": null,
-    "lineNumber": 79,
+    "lineNumber": 81,
     "undocument": true,
     "unknown": [
       {
@@ -933,7 +1073,7 @@
     ]
   },
   {
-    "__docId__": 36,
+    "__docId__": 42,
     "kind": "method",
     "name": "renderInput",
     "memberof": "src/Checkbox.jsx~Checkbox",
@@ -943,7 +1083,7 @@
     "longname": "src/Checkbox.jsx~Checkbox#renderInput",
     "access": null,
     "description": null,
-    "lineNumber": 87,
+    "lineNumber": 89,
     "undocument": true,
     "unknown": [
       {
@@ -959,7 +1099,7 @@
     }
   },
   {
-    "__docId__": 37,
+    "__docId__": 43,
     "kind": "member",
     "name": "element",
     "memberof": "src/Checkbox.jsx~Checkbox",
@@ -967,7 +1107,7 @@
     "longname": "src/Checkbox.jsx~Checkbox#element",
     "access": null,
     "description": null,
-    "lineNumber": 102,
+    "lineNumber": 104,
     "undocument": true,
     "unknown": [
       {
@@ -982,7 +1122,7 @@
     }
   },
   {
-    "__docId__": 38,
+    "__docId__": 44,
     "kind": "method",
     "name": "render",
     "memberof": "src/Checkbox.jsx~Checkbox",
@@ -992,7 +1132,7 @@
     "longname": "src/Checkbox.jsx~Checkbox#render",
     "access": null,
     "description": null,
-    "lineNumber": 108,
+    "lineNumber": 110,
     "undocument": true,
     "unknown": [
       {
@@ -1008,7 +1148,7 @@
     }
   },
   {
-    "__docId__": 39,
+    "__docId__": 45,
     "kind": "file",
     "name": "src/Control.jsx",
     "content": "",
@@ -1019,7 +1159,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 40,
+    "__docId__": 46,
     "kind": "function",
     "name": "Control",
     "memberof": "src/Control.jsx",
@@ -1032,7 +1172,7 @@
     "importPath": "prg-form/src/Control.jsx",
     "importStyle": "Control",
     "description": null,
-    "lineNumber": 7,
+    "lineNumber": 8,
     "undocument": true,
     "unknown": [
       {
@@ -1060,7 +1200,7 @@
     }
   },
   {
-    "__docId__": 41,
+    "__docId__": 47,
     "kind": "file",
     "name": "src/File.jsx",
     "content": "",
@@ -1071,7 +1211,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 42,
+    "__docId__": 48,
     "kind": "class",
     "name": "File",
     "memberof": "src/File.jsx",
@@ -1085,7 +1225,7 @@
     "examples": [
       "// as single file\n<File\n    name=\"inputName\"\n    iconBefore={<i className=\"fa fa-meetup\" />}\n    onChange={(file) => file instanceof File} // native File object\n/>\n\n// as multiple files files\n<File\n    name=\"inputName[]\" // do not forget to use with brackets\n    iconBefore={<i className=\"fa fa-meetup\" />}\n    onChange={(files) => Array.isArray(files) && files[0] instanceof File} // native File object\n/>"
     ],
-    "lineNumber": 46,
+    "lineNumber": 47,
     "unknown": [
       {
         "tagName": "@class",
@@ -1098,7 +1238,7 @@
     ]
   },
   {
-    "__docId__": 43,
+    "__docId__": 49,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/File.jsx~File",
@@ -1108,7 +1248,7 @@
     "longname": "src/File.jsx~File#constructor",
     "access": null,
     "description": null,
-    "lineNumber": 48,
+    "lineNumber": 49,
     "undocument": true,
     "unknown": [
       {
@@ -1132,7 +1272,7 @@
     ]
   },
   {
-    "__docId__": 44,
+    "__docId__": 50,
     "kind": "member",
     "name": "name",
     "memberof": "src/File.jsx~File",
@@ -1140,7 +1280,7 @@
     "longname": "src/File.jsx~File#name",
     "access": null,
     "description": null,
-    "lineNumber": 52,
+    "lineNumber": 53,
     "undocument": true,
     "unknown": [
       {
@@ -1155,7 +1295,7 @@
     }
   },
   {
-    "__docId__": 45,
+    "__docId__": 51,
     "kind": "method",
     "name": "componentDidUpdate",
     "memberof": "src/File.jsx~File",
@@ -1165,7 +1305,7 @@
     "longname": "src/File.jsx~File#componentDidUpdate",
     "access": null,
     "description": null,
-    "lineNumber": 56,
+    "lineNumber": 57,
     "undocument": true,
     "unknown": [
       {
@@ -1189,7 +1329,30 @@
     ]
   },
   {
-    "__docId__": 46,
+    "__docId__": 52,
+    "kind": "member",
+    "name": "inReset",
+    "memberof": "src/File.jsx~File",
+    "static": false,
+    "longname": "src/File.jsx~File#inReset",
+    "access": null,
+    "description": null,
+    "lineNumber": 69,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "boolean"
+      ]
+    }
+  },
+  {
+    "__docId__": 53,
     "kind": "method",
     "name": "setValue",
     "memberof": "src/File.jsx~File",
@@ -1199,7 +1362,7 @@
     "longname": "src/File.jsx~File#setValue",
     "access": null,
     "description": null,
-    "lineNumber": 70,
+    "lineNumber": 72,
     "undocument": true,
     "unknown": [
       {
@@ -1222,7 +1385,7 @@
     }
   },
   {
-    "__docId__": 47,
+    "__docId__": 54,
     "kind": "method",
     "name": "onChange",
     "memberof": "src/File.jsx~File",
@@ -1232,7 +1395,7 @@
     "longname": "src/File.jsx~File#onChange",
     "access": null,
     "description": null,
-    "lineNumber": 83,
+    "lineNumber": 85,
     "undocument": true,
     "unknown": [
       {
@@ -1250,7 +1413,7 @@
     ]
   },
   {
-    "__docId__": 48,
+    "__docId__": 55,
     "kind": "method",
     "name": "renderInput",
     "memberof": "src/File.jsx~File",
@@ -1260,7 +1423,7 @@
     "longname": "src/File.jsx~File#renderInput",
     "access": null,
     "description": null,
-    "lineNumber": 104,
+    "lineNumber": 107,
     "undocument": true,
     "unknown": [
       {
@@ -1276,7 +1439,7 @@
     }
   },
   {
-    "__docId__": 49,
+    "__docId__": 56,
     "kind": "member",
     "name": "element",
     "memberof": "src/File.jsx~File",
@@ -1284,7 +1447,7 @@
     "longname": "src/File.jsx~File#element",
     "access": null,
     "description": null,
-    "lineNumber": 116,
+    "lineNumber": 119,
     "undocument": true,
     "unknown": [
       {
@@ -1299,7 +1462,7 @@
     }
   },
   {
-    "__docId__": 50,
+    "__docId__": 57,
     "kind": "file",
     "name": "src/Form.jsx",
     "content": "",
@@ -1310,7 +1473,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 51,
+    "__docId__": 58,
     "kind": "class",
     "name": "Form",
     "memberof": "src/Form.jsx",
@@ -1324,7 +1487,7 @@
     "examples": [
       "import { Form, Input } from 'prg-form';\n\nfunction MyForm ({ values }) {\n    return (\n        <Form\n            className=\"special-class\"\n            onSubmit={(values, form) => console.log(values)}\n            onChange={(input) => console.log(input.name, input.getValue())}\n            values={values}\n        >\n             <Input type=\"email\" name=\"inputName\" label=\"Input Label\" />\n        </Form>\n    );\n}"
     ],
-    "lineNumber": 38,
+    "lineNumber": 39,
     "unknown": [
       {
         "tagName": "@class",
@@ -1337,7 +1500,7 @@
     ]
   },
   {
-    "__docId__": 52,
+    "__docId__": 59,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/Form.jsx~Form",
@@ -1347,7 +1510,7 @@
     "longname": "src/Form.jsx~Form#constructor",
     "access": null,
     "description": null,
-    "lineNumber": 40,
+    "lineNumber": 41,
     "undocument": true,
     "unknown": [
       {
@@ -1365,7 +1528,7 @@
     ]
   },
   {
-    "__docId__": 53,
+    "__docId__": 60,
     "kind": "member",
     "name": "inputs",
     "memberof": "src/Form.jsx~Form",
@@ -1373,7 +1536,7 @@
     "longname": "src/Form.jsx~Form#inputs",
     "access": null,
     "description": null,
-    "lineNumber": 43,
+    "lineNumber": 44,
     "undocument": true,
     "unknown": [
       {
@@ -1388,7 +1551,7 @@
     }
   },
   {
-    "__docId__": 54,
+    "__docId__": 61,
     "kind": "method",
     "name": "getChildContext",
     "memberof": "src/Form.jsx~Form",
@@ -1398,7 +1561,7 @@
     "longname": "src/Form.jsx~Form#getChildContext",
     "access": null,
     "description": null,
-    "lineNumber": 46,
+    "lineNumber": 47,
     "undocument": true,
     "unknown": [
       {
@@ -1414,7 +1577,7 @@
     }
   },
   {
-    "__docId__": 55,
+    "__docId__": 62,
     "kind": "method",
     "name": "componentDidUpdate",
     "memberof": "src/Form.jsx~Form",
@@ -1424,7 +1587,7 @@
     "longname": "src/Form.jsx~Form#componentDidUpdate",
     "access": null,
     "description": null,
-    "lineNumber": 54,
+    "lineNumber": 55,
     "undocument": true,
     "unknown": [
       {
@@ -1442,7 +1605,7 @@
     ]
   },
   {
-    "__docId__": 56,
+    "__docId__": 63,
     "kind": "method",
     "name": "onChangeInput",
     "memberof": "src/Form.jsx~Form",
@@ -1452,7 +1615,7 @@
     "longname": "src/Form.jsx~Form#onChangeInput",
     "access": null,
     "description": null,
-    "lineNumber": 62,
+    "lineNumber": 63,
     "undocument": true,
     "unknown": [
       {
@@ -1470,7 +1633,7 @@
     ]
   },
   {
-    "__docId__": 57,
+    "__docId__": 64,
     "kind": "method",
     "name": "onSubmit",
     "memberof": "src/Form.jsx~Form",
@@ -1480,7 +1643,7 @@
     "longname": "src/Form.jsx~Form#onSubmit",
     "access": null,
     "description": null,
-    "lineNumber": 66,
+    "lineNumber": 67,
     "undocument": true,
     "unknown": [
       {
@@ -1498,7 +1661,7 @@
     ]
   },
   {
-    "__docId__": 58,
+    "__docId__": 65,
     "kind": "method",
     "name": "getValues",
     "memberof": "src/Form.jsx~Form",
@@ -1508,7 +1671,7 @@
     "longname": "src/Form.jsx~Form#getValues",
     "access": null,
     "description": "Returns current form data",
-    "lineNumber": 79,
+    "lineNumber": 80,
     "unknown": [
       {
         "tagName": "@returns",
@@ -1530,7 +1693,7 @@
     }
   },
   {
-    "__docId__": 59,
+    "__docId__": 66,
     "kind": "method",
     "name": "setErrors",
     "memberof": "src/Form.jsx~Form",
@@ -1543,7 +1706,7 @@
     "examples": [
       "// set signle error to inputName\nform.setErrors({ inputName: 'Error text' });"
     ],
-    "lineNumber": 97,
+    "lineNumber": 98,
     "unknown": [
       {
         "tagName": "@memberOf",
@@ -1564,7 +1727,41 @@
     ]
   },
   {
-    "__docId__": 60,
+    "__docId__": 67,
+    "kind": "method",
+    "name": "reset",
+    "memberof": "src/Form.jsx~Form",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Form.jsx~Form#reset",
+    "access": null,
+    "description": "Resets form without trigging the onChange method",
+    "examples": [
+      "// makes form empty and resets all errors\nform.reset();\n\n// sets data and resets all errors without trigging the validation\nform.reset();"
+    ],
+    "lineNumber": 121,
+    "unknown": [
+      {
+        "tagName": "@memberOf",
+        "tagValue": "Form"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "__docId__": 68,
     "kind": "method",
     "name": "inputWillMount",
     "memberof": "src/Form.jsx~Form",
@@ -1574,7 +1771,7 @@
     "longname": "src/Form.jsx~Form#inputWillMount",
     "access": null,
     "description": null,
-    "lineNumber": 107,
+    "lineNumber": 131,
     "undocument": true,
     "unknown": [
       {
@@ -1592,7 +1789,7 @@
     ]
   },
   {
-    "__docId__": 61,
+    "__docId__": 69,
     "kind": "method",
     "name": "inputWillUnmount",
     "memberof": "src/Form.jsx~Form",
@@ -1602,7 +1799,7 @@
     "longname": "src/Form.jsx~Form#inputWillUnmount",
     "access": null,
     "description": null,
-    "lineNumber": 112,
+    "lineNumber": 136,
     "undocument": true,
     "unknown": [
       {
@@ -1620,7 +1817,7 @@
     ]
   },
   {
-    "__docId__": 62,
+    "__docId__": 70,
     "kind": "method",
     "name": "render",
     "memberof": "src/Form.jsx~Form",
@@ -1630,7 +1827,7 @@
     "longname": "src/Form.jsx~Form#render",
     "access": null,
     "description": null,
-    "lineNumber": 116,
+    "lineNumber": 140,
     "undocument": true,
     "unknown": [
       {
@@ -1646,7 +1843,7 @@
     }
   },
   {
-    "__docId__": 63,
+    "__docId__": 71,
     "kind": "file",
     "name": "src/Input.jsx",
     "content": "",
@@ -1657,7 +1854,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 64,
+    "__docId__": 72,
     "kind": "class",
     "name": "Input",
     "memberof": "src/Input.jsx",
@@ -1684,7 +1881,7 @@
     ]
   },
   {
-    "__docId__": 65,
+    "__docId__": 73,
     "kind": "file",
     "name": "src/LabeledControl.jsx",
     "content": "",
@@ -1695,7 +1892,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 66,
+    "__docId__": 74,
     "kind": "function",
     "name": "LabeledControl",
     "memberof": "src/LabeledControl.jsx",
@@ -1708,7 +1905,7 @@
     "importPath": "prg-form/src/LabeledControl.jsx",
     "importStyle": "LabeledControl",
     "description": null,
-    "lineNumber": 8,
+    "lineNumber": 9,
     "undocument": true,
     "unknown": [
       {
@@ -1731,7 +1928,7 @@
     }
   },
   {
-    "__docId__": 67,
+    "__docId__": 75,
     "kind": "file",
     "name": "src/TextArea.jsx",
     "content": "",
@@ -1742,7 +1939,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 68,
+    "__docId__": 76,
     "kind": "class",
     "name": "TextArea",
     "memberof": "src/TextArea.jsx",
@@ -1756,7 +1953,7 @@
     "examples": [
       "<TextArea\n    name=\"inputName\"\n    cols={20}\n    rows={5}\n/>"
     ],
-    "lineNumber": 45,
+    "lineNumber": 46,
     "unknown": [
       {
         "tagName": "@class",
@@ -1769,7 +1966,7 @@
     ]
   },
   {
-    "__docId__": 69,
+    "__docId__": 77,
     "kind": "method",
     "name": "renderInput",
     "memberof": "src/TextArea.jsx~TextArea",
@@ -1779,7 +1976,7 @@
     "longname": "src/TextArea.jsx~TextArea#renderInput",
     "access": null,
     "description": null,
-    "lineNumber": 47,
+    "lineNumber": 48,
     "undocument": true,
     "unknown": [
       {
@@ -1795,7 +1992,7 @@
     }
   },
   {
-    "__docId__": 70,
+    "__docId__": 78,
     "kind": "member",
     "name": "element",
     "memberof": "src/TextArea.jsx~TextArea",
@@ -1803,7 +2000,7 @@
     "longname": "src/TextArea.jsx~TextArea#element",
     "access": null,
     "description": null,
-    "lineNumber": 72,
+    "lineNumber": 73,
     "undocument": true,
     "unknown": [
       {
@@ -1818,7 +2015,7 @@
     }
   },
   {
-    "__docId__": 71,
+    "__docId__": 79,
     "kind": "file",
     "name": "src/ValidatorForm.jsx",
     "content": "",
@@ -1829,7 +2026,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 72,
+    "__docId__": 80,
     "kind": "class",
     "name": "ValidatorForm",
     "memberof": "src/ValidatorForm.jsx",
@@ -1843,7 +2040,7 @@
     "examples": [
       "import { ValidatorForm, Input } from 'prg-form';\nimport Validator from 'prg-validator';\n\nfunction MyForm ({ values }) {\n    const validator = new Validator();\n\n    validator.add('email')\n        .isEmail('Email should be valid');\n\n    return (\n        <ValidatorForm\n            className=\"special-class\"\n            onSubmit={(values, form) => console.log(values)}\n            onChange={(input) => console.log(input.name, input.getValue())}\n            validator={validator}\n            values={values}\n        >\n             <Input type=\"email\" name=\"inputName\" label=\"Input Label\" />\n        </Form>\n    );\n}"
     ],
-    "lineNumber": 64,
+    "lineNumber": 65,
     "unknown": [
       {
         "tagName": "@class",
@@ -1856,7 +2053,7 @@
     ]
   },
   {
-    "__docId__": 73,
+    "__docId__": 81,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/ValidatorForm.jsx~ValidatorForm",
@@ -1866,7 +2063,7 @@
     "longname": "src/ValidatorForm.jsx~ValidatorForm#constructor",
     "access": null,
     "description": null,
-    "lineNumber": 66,
+    "lineNumber": 67,
     "undocument": true,
     "unknown": [
       {
@@ -1884,7 +2081,7 @@
     ]
   },
   {
-    "__docId__": 74,
+    "__docId__": 82,
     "kind": "member",
     "name": "form",
     "memberof": "src/ValidatorForm.jsx~ValidatorForm",
@@ -1892,7 +2089,7 @@
     "longname": "src/ValidatorForm.jsx~ValidatorForm#form",
     "access": null,
     "description": null,
-    "lineNumber": 69,
+    "lineNumber": 70,
     "undocument": true,
     "unknown": [
       {
@@ -1907,7 +2104,7 @@
     }
   },
   {
-    "__docId__": 75,
+    "__docId__": 83,
     "kind": "method",
     "name": "onChange",
     "memberof": "src/ValidatorForm.jsx~ValidatorForm",
@@ -1917,7 +2114,7 @@
     "longname": "src/ValidatorForm.jsx~ValidatorForm#onChange",
     "access": null,
     "description": null,
-    "lineNumber": 72,
+    "lineNumber": 73,
     "undocument": true,
     "unknown": [
       {
@@ -1935,7 +2132,7 @@
     ]
   },
   {
-    "__docId__": 76,
+    "__docId__": 84,
     "kind": "method",
     "name": "onSubmit",
     "memberof": "src/ValidatorForm.jsx~ValidatorForm",
@@ -1945,7 +2142,7 @@
     "longname": "src/ValidatorForm.jsx~ValidatorForm#onSubmit",
     "access": null,
     "description": null,
-    "lineNumber": 82,
+    "lineNumber": 83,
     "undocument": true,
     "unknown": [
       {
@@ -1969,7 +2166,7 @@
     ]
   },
   {
-    "__docId__": 77,
+    "__docId__": 85,
     "kind": "method",
     "name": "getValues",
     "memberof": "src/ValidatorForm.jsx~ValidatorForm",
@@ -1979,7 +2176,7 @@
     "longname": "src/ValidatorForm.jsx~ValidatorForm#getValues",
     "access": null,
     "description": "Returns form values",
-    "lineNumber": 110,
+    "lineNumber": 111,
     "unknown": [
       {
         "tagName": "@returns",
@@ -2001,7 +2198,41 @@
     }
   },
   {
-    "__docId__": 78,
+    "__docId__": 86,
+    "kind": "method",
+    "name": "reset",
+    "memberof": "src/ValidatorForm.jsx~ValidatorForm",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/ValidatorForm.jsx~ValidatorForm#reset",
+    "access": null,
+    "description": "Resets form without trigging the validation",
+    "examples": [
+      "// makes form empty and resets all errors\nform.reset();\n\n// sets data and resets all errors without trigging the validation\nform.reset();"
+    ],
+    "lineNumber": 131,
+    "unknown": [
+      {
+        "tagName": "@memberOf",
+        "tagValue": "Form"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "__docId__": 87,
     "kind": "method",
     "name": "render",
     "memberof": "src/ValidatorForm.jsx~ValidatorForm",
@@ -2011,7 +2242,7 @@
     "longname": "src/ValidatorForm.jsx~ValidatorForm#render",
     "access": null,
     "description": null,
-    "lineNumber": 117,
+    "lineNumber": 135,
     "undocument": true,
     "unknown": [
       {
@@ -2027,7 +2258,7 @@
     }
   },
   {
-    "__docId__": 79,
+    "__docId__": 88,
     "kind": "member",
     "name": "form",
     "memberof": "src/ValidatorForm.jsx~ValidatorForm",
@@ -2035,7 +2266,7 @@
     "longname": "src/ValidatorForm.jsx~ValidatorForm#form",
     "access": null,
     "description": null,
-    "lineNumber": 123,
+    "lineNumber": 141,
     "undocument": true,
     "unknown": [
       {
@@ -2050,7 +2281,7 @@
     }
   },
   {
-    "__docId__": 80,
+    "__docId__": 89,
     "kind": "file",
     "name": "src/main.js",
     "content": "",
@@ -2061,7 +2292,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 81,
+    "__docId__": 90,
     "kind": "file",
     "name": "src/path.js",
     "content": "",
@@ -2072,7 +2303,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 82,
+    "__docId__": 91,
     "kind": "function",
     "name": "pathToDots",
     "memberof": "src/path.js",
@@ -2108,7 +2339,7 @@
     }
   },
   {
-    "__docId__": 83,
+    "__docId__": 92,
     "kind": "function",
     "name": "shallowDiff",
     "memberof": "src/path.js",
@@ -2150,7 +2381,7 @@
     }
   },
   {
-    "__docId__": 84,
+    "__docId__": 93,
     "kind": "function",
     "name": "createTree",
     "memberof": "src/path.js",
@@ -2201,7 +2432,7 @@
     }
   },
   {
-    "__docId__": 85,
+    "__docId__": 94,
     "kind": "function",
     "name": "shallowToDeep",
     "memberof": "src/path.js",
@@ -2237,7 +2468,7 @@
     }
   },
   {
-    "__docId__": 86,
+    "__docId__": 95,
     "kind": "function",
     "name": "pathToFormBrackets",
     "memberof": "src/path.js",
@@ -2273,7 +2504,7 @@
     }
   },
   {
-    "__docId__": 87,
+    "__docId__": 96,
     "kind": "function",
     "name": "flat",
     "memberof": "src/path.js",
@@ -2330,7 +2561,7 @@
     }
   },
   {
-    "__docId__": 88,
+    "__docId__": 97,
     "kind": "function",
     "name": "getValue",
     "memberof": "src/path.js",
@@ -2372,7 +2603,7 @@
     }
   },
   {
-    "__docId__": 89,
+    "__docId__": 98,
     "kind": "function",
     "name": "join",
     "memberof": "src/path.js",
@@ -2408,7 +2639,7 @@
     }
   },
   {
-    "__docId__": 91,
+    "__docId__": 100,
     "kind": "external",
     "name": "Infinity",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
@@ -2420,7 +2651,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 92,
+    "__docId__": 101,
     "kind": "external",
     "name": "NaN",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
@@ -2432,7 +2663,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 93,
+    "__docId__": 102,
     "kind": "external",
     "name": "undefined",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
@@ -2444,7 +2675,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 94,
+    "__docId__": 103,
     "kind": "external",
     "name": "null",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
@@ -2456,7 +2687,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 95,
+    "__docId__": 104,
     "kind": "external",
     "name": "Object",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
@@ -2468,7 +2699,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 96,
+    "__docId__": 105,
     "kind": "external",
     "name": "object",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
@@ -2480,7 +2711,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 97,
+    "__docId__": 106,
     "kind": "external",
     "name": "Function",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
@@ -2492,7 +2723,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 98,
+    "__docId__": 107,
     "kind": "external",
     "name": "function",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
@@ -2504,7 +2735,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 99,
+    "__docId__": 108,
     "kind": "external",
     "name": "Boolean",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
@@ -2516,7 +2747,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 100,
+    "__docId__": 109,
     "kind": "external",
     "name": "boolean",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
@@ -2528,7 +2759,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 101,
+    "__docId__": 110,
     "kind": "external",
     "name": "Symbol",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
@@ -2540,7 +2771,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 102,
+    "__docId__": 111,
     "kind": "external",
     "name": "Error",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
@@ -2552,7 +2783,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 103,
+    "__docId__": 112,
     "kind": "external",
     "name": "EvalError",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
@@ -2564,7 +2795,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 104,
+    "__docId__": 113,
     "kind": "external",
     "name": "InternalError",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
@@ -2576,7 +2807,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 105,
+    "__docId__": 114,
     "kind": "external",
     "name": "RangeError",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
@@ -2588,7 +2819,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 106,
+    "__docId__": 115,
     "kind": "external",
     "name": "ReferenceError",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
@@ -2600,7 +2831,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 107,
+    "__docId__": 116,
     "kind": "external",
     "name": "SyntaxError",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
@@ -2612,7 +2843,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 108,
+    "__docId__": 117,
     "kind": "external",
     "name": "TypeError",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
@@ -2624,7 +2855,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 109,
+    "__docId__": 118,
     "kind": "external",
     "name": "URIError",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
@@ -2636,7 +2867,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 110,
+    "__docId__": 119,
     "kind": "external",
     "name": "Number",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
@@ -2648,7 +2879,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 111,
+    "__docId__": 120,
     "kind": "external",
     "name": "number",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
@@ -2660,7 +2891,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 112,
+    "__docId__": 121,
     "kind": "external",
     "name": "Date",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
@@ -2672,7 +2903,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 113,
+    "__docId__": 122,
     "kind": "external",
     "name": "String",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
@@ -2684,7 +2915,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 114,
+    "__docId__": 123,
     "kind": "external",
     "name": "string",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
@@ -2696,7 +2927,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 115,
+    "__docId__": 124,
     "kind": "external",
     "name": "RegExp",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
@@ -2708,7 +2939,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 116,
+    "__docId__": 125,
     "kind": "external",
     "name": "Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
@@ -2720,7 +2951,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 117,
+    "__docId__": 126,
     "kind": "external",
     "name": "Int8Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
@@ -2732,7 +2963,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 118,
+    "__docId__": 127,
     "kind": "external",
     "name": "Uint8Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
@@ -2744,7 +2975,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 119,
+    "__docId__": 128,
     "kind": "external",
     "name": "Uint8ClampedArray",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
@@ -2756,7 +2987,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 120,
+    "__docId__": 129,
     "kind": "external",
     "name": "Int16Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
@@ -2768,7 +2999,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 121,
+    "__docId__": 130,
     "kind": "external",
     "name": "Uint16Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
@@ -2780,7 +3011,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 122,
+    "__docId__": 131,
     "kind": "external",
     "name": "Int32Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
@@ -2792,7 +3023,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 123,
+    "__docId__": 132,
     "kind": "external",
     "name": "Uint32Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
@@ -2804,7 +3035,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 124,
+    "__docId__": 133,
     "kind": "external",
     "name": "Float32Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
@@ -2816,7 +3047,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 125,
+    "__docId__": 134,
     "kind": "external",
     "name": "Float64Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
@@ -2828,7 +3059,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 126,
+    "__docId__": 135,
     "kind": "external",
     "name": "Map",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
@@ -2840,7 +3071,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 127,
+    "__docId__": 136,
     "kind": "external",
     "name": "Set",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
@@ -2852,7 +3083,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 128,
+    "__docId__": 137,
     "kind": "external",
     "name": "WeakMap",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
@@ -2864,7 +3095,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 129,
+    "__docId__": 138,
     "kind": "external",
     "name": "WeakSet",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
@@ -2876,7 +3107,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 130,
+    "__docId__": 139,
     "kind": "external",
     "name": "ArrayBuffer",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
@@ -2888,7 +3119,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 131,
+    "__docId__": 140,
     "kind": "external",
     "name": "DataView",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
@@ -2900,7 +3131,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 132,
+    "__docId__": 141,
     "kind": "external",
     "name": "JSON",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
@@ -2912,7 +3143,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 133,
+    "__docId__": 142,
     "kind": "external",
     "name": "Promise",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
@@ -2924,7 +3155,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 134,
+    "__docId__": 143,
     "kind": "external",
     "name": "Generator",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
@@ -2936,7 +3167,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 135,
+    "__docId__": 144,
     "kind": "external",
     "name": "GeneratorFunction",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
@@ -2948,7 +3179,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 136,
+    "__docId__": 145,
     "kind": "external",
     "name": "Reflect",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
@@ -2960,7 +3191,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 137,
+    "__docId__": 146,
     "kind": "external",
     "name": "Proxy",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
@@ -2973,7 +3204,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 139,
+    "__docId__": 148,
     "kind": "external",
     "name": "CanvasRenderingContext2D",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D",
@@ -2985,7 +3216,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 140,
+    "__docId__": 149,
     "kind": "external",
     "name": "DocumentFragment",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment",
@@ -2997,7 +3228,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 141,
+    "__docId__": 150,
     "kind": "external",
     "name": "Element",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Element",
@@ -3009,7 +3240,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 142,
+    "__docId__": 151,
     "kind": "external",
     "name": "Event",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Event",
@@ -3021,7 +3252,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 143,
+    "__docId__": 152,
     "kind": "external",
     "name": "Node",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Node",
@@ -3033,7 +3264,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 144,
+    "__docId__": 153,
     "kind": "external",
     "name": "NodeList",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/NodeList",
@@ -3045,7 +3276,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 145,
+    "__docId__": 154,
     "kind": "external",
     "name": "XMLHttpRequest",
     "externalLink": "https://developer.mozilla.org/en/docs/Web/API/XMLHttpRequest",
@@ -3057,7 +3288,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 146,
+    "__docId__": 155,
     "kind": "external",
     "name": "AudioContext",
     "externalLink": "https://developer.mozilla.org/en/docs/Web/API/AudioContext",

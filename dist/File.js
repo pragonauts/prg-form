@@ -50,10 +50,11 @@ var File = function (_BaseInput) {
                     this.element.value = '';
                 }
 
-                if (this.context.onChangeInput) {
+                if (this.context.onChangeInput && !this.inReset) {
                     this.context.onChangeInput(this);
                 }
             }
+            this.inReset = false;
         }
     }, {
         key: 'setValue',
@@ -85,7 +86,7 @@ var File = function (_BaseInput) {
             }
             var val = this.setValue(newValue);
             this.props.onChange(val, this);
-            if (this.context.onChangeInput && val === this.state.value) {
+            if (this.context.onChangeInput && val === this.state.value && !this.inReset) {
 
                 this.context.onChangeInput(this);
             }

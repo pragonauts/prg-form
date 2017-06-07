@@ -60,6 +60,51 @@ function setValue (app, selector, value) {
             assert.equal(app.node.name, name);
         });
 
+        it('reset of input should not trigger contexts onchange', function () {
+            const onChangeInput = sinon.spy();
+
+            const app = mount(
+                <Elem
+                    name="name"
+                    label="Foo"
+                    value={barValue}
+                    defaultValue={fooValue}
+                    {...args}
+                />,
+                {
+                    context: { onChangeInput },
+                    childContextTypes: {
+                        onChangeInput: PropTypes.func
+                    }
+                }
+            );
+
+            const error = 'Text of the error';
+
+            app.node.setError(error);
+
+            let err = app.find('span.help.is-danger');
+
+            assert.equal(err.length, 1, 'There should be one error');
+            assert(app.find('.fa.fa-warning').length === 1);
+            assert.equal(err.text(), error);
+            assert.equal(onChangeInput.callCount, 0, 'reset should not be called');
+
+            app.node.resetValue();
+
+            err = app.find('span.help.is-danger');
+
+            if (args.multiple) {
+                assert(Array.isArray(app.node.getValue()), 'should be array');
+                assert.strictEqual(app.node.getValue().length, 0, 'should be empty');
+            } else {
+                assert.strictEqual(app.node.getValue(), fooValue);
+            }
+
+            assert.equal(err.length, 0, 'There should be one error');
+            assert.equal(onChangeInput.callCount, 0, 'reset should not be called');
+        });
+
         it('should render label if provided', function () {
             const app = mount(
                 <Elem

@@ -390,6 +390,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "src/baseinput.jsx~baseinput#resetvalue",
+    "class/src/BaseInput.jsx~BaseInput.html#instance-method-resetValue",
+    "src/BaseInput.jsx~BaseInput#resetValue",
+    "method"
+  ],
+  [
     "src/baseinput.jsx~baseinput#seterror",
     "class/src/BaseInput.jsx~BaseInput.html#instance-method-setError",
     "src/BaseInput.jsx~BaseInput#setError",
@@ -432,6 +438,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "src/form.jsx~form#reset",
+    "class/src/Form.jsx~Form.html#instance-method-reset",
+    "src/Form.jsx~Form#reset",
+    "method"
+  ],
+  [
     "src/form.jsx~form#seterrors",
     "class/src/Form.jsx~Form.html#instance-method-setErrors",
     "src/Form.jsx~Form#setErrors",
@@ -465,6 +477,12 @@ window.esdocSearchIndex = [
     "src/validatorform.jsx~validatorform#getvalues",
     "class/src/ValidatorForm.jsx~ValidatorForm.html#instance-method-getValues",
     "src/ValidatorForm.jsx~ValidatorForm#getValues",
+    "method"
+  ],
+  [
+    "src/validatorform.jsx~validatorform#reset",
+    "class/src/ValidatorForm.jsx~ValidatorForm.html#instance-method-reset",
+    "src/ValidatorForm.jsx~ValidatorForm#reset",
     "method"
   ],
   [

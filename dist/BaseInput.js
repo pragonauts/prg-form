@@ -46,6 +46,8 @@ var BaseInput = function (_Component) {
         };
 
         _this.mounted = false;
+
+        _this.inReset = false;
         return _this;
     }
 
@@ -67,6 +69,7 @@ var BaseInput = function (_Component) {
                     return _this2.element.focus();
                 }, 400);
             }
+            this.inReset = false;
         }
     }, {
         key: 'componentWillReceiveProps',
@@ -78,10 +81,11 @@ var BaseInput = function (_Component) {
     }, {
         key: 'componentDidUpdate',
         value: function componentDidUpdate(prevProps, prevState) {
-            if (this.context.onChangeInput && prevState.value !== this.state.value) {
+            if (this.context.onChangeInput && prevState.value !== this.state.value && !this.inReset) {
 
                 this.context.onChangeInput(this);
             }
+            this.inReset = false;
         }
     }, {
         key: 'componentWillUnmount',
@@ -174,6 +178,14 @@ var BaseInput = function (_Component) {
             }
 
             return controlClassName;
+        }
+    }, {
+        key: 'resetValue',
+        value: function resetValue(value) {
+            this.inReset = true;
+            this.setValue(value);
+            this.inReset = true;
+            this.setError();
         }
     }, {
         key: 'renderInput',

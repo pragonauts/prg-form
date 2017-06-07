@@ -105,6 +105,29 @@ class Form extends Component {
         });
     }
 
+    /**
+     * Resets form without trigging the onChange method
+     *
+     * @param {Object} [data]
+     *
+     * @memberOf Form
+     * @example
+     * // makes form empty and resets all errors
+     * form.reset();
+     *
+     * // sets data and resets all errors without trigging the validation
+     * form.reset();
+     */
+    reset (data = null) {
+        this.inputs.forEach((input, name) => {
+            if (data !== null) {
+                input.resetValue(getValue(this.props.values, name));
+            } else {
+                input.resetValue();
+            }
+        });
+    }
+
     inputWillMount (input) {
         this.inputs.set(input.name, input);
         input.setValue(getValue(this.props.values, input.name));

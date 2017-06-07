@@ -115,12 +115,29 @@ class ValidatorForm extends Component {
         return this.form.getValues();
     }
 
+    /**
+     * Resets form without trigging the validation
+     *
+     * @param {Object} [data]
+     *
+     * @memberOf Form
+     * @example
+     * // makes form empty and resets all errors
+     * form.reset();
+     *
+     * // sets data and resets all errors without trigging the validation
+     * form.reset();
+     */
+    reset (data = null) {
+        this.form.reset(data);
+    }
+
     render () {
         const { values, children, className } = this.props;
         return (<Form
             values={values}
             onSubmit={(data, form) => this.onSubmit(data, form)}
-            onChange={(data, form) => this.onChange(data, form)}
+            onChange={data => this.onChange(data)}
             ref={(el) => { this.form = el; }}
             className={className}
         >

@@ -45,13 +45,13 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Form from &apos;<span><a href="file/src/Form.jsx.html#lineNumber38">prg-form/src/Form.jsx</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Form from &apos;<span><a href="file/src/Form.jsx.html#lineNumber39">prg-form/src/Form.jsx</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/src/Form.jsx.html#lineNumber38">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/src/Form.jsx.html#lineNumber39">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -190,6 +190,34 @@ function MyForm ({ values }) {
         <p>
           
           
+          <span data-ice="name"><span><a href="class/src/Form.jsx~Form.html#instance-method-reset">reset</a></span></span><span data-ice="signature">(data: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>)</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Resets form without trigging the onChange method</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
           <span data-ice="name"><span><a href="class/src/Form.jsx~Form.html#instance-method-setErrors">setErrors</a></span></span><span data-ice="signature">(errorList: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>)</span>
         </p>
       </div>
@@ -229,7 +257,7 @@ function MyForm ({ values }) {
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Form.jsx.html#lineNumber79">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Form.jsx.html#lineNumber80">source</a></span></span>
     </span>
   </h3>
 
@@ -274,6 +302,77 @@ function MyForm ({ values }) {
   
 </div>
 <div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-reset">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span data-ice="name">reset</span><span data-ice="signature">(data: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>)</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Form.jsx.html#lineNumber121">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Resets form without trigging the onChange method</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">data</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
+      <td data-ice="appendix"><ul><li>optional</li></ul></td>
+      <td data-ice="description"></td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">// makes form empty and resets all errors
+form.reset();
+
+// sets data and resets all errors without trigging the validation
+form.reset();</code></pre>
+    </div>
+</div>
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
   <h3 data-ice="anchor" id="instance-method-setErrors">
     <span class="access" data-ice="access">public</span>
     
@@ -285,7 +384,7 @@ function MyForm ({ values }) {
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Form.jsx.html#lineNumber97">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Form.jsx.html#lineNumber98">source</a></span></span>
     </span>
   </h3>
 

@@ -62,6 +62,8 @@ class BaseInput extends Component {
         };
 
         this.mounted = false;
+
+        this.inReset = false;
     }
 
     componentWillMount () {
@@ -75,6 +77,7 @@ class BaseInput extends Component {
         if (this.props.autofocus && this.element) {
             setTimeout(() => this.element.focus(), 400);
         }
+        this.inReset = false;
     }
 
     componentWillReceiveProps (nextProps) {
@@ -85,10 +88,12 @@ class BaseInput extends Component {
 
     componentDidUpdate (prevProps, prevState) {
         if (this.context.onChangeInput
-            && prevState.value !== this.state.value) {
+            && prevState.value !== this.state.value
+            && !this.inReset) {
 
             this.context.onChangeInput(this);
         }
+        this.inReset = false;
     }
 
     componentWillUnmount () {
@@ -120,7 +125,7 @@ class BaseInput extends Component {
      *
      * @memberOf BaseInput
      * @example
-     * // reset to default value
+     * // set default value
      * input.setValue()
      *
      * // set value
@@ -196,6 +201,18 @@ class BaseInput extends Component {
         }
 
         return controlClassName;
+    }
+
+    /**
+     * Reset and clean the validation errors
+     *
+     * @param {*} [value] leave empty to reset to default value
+     */
+    resetValue (value) {
+        this.inReset = true;
+        this.setValue(value);
+        this.inReset = true;
+        this.setError();
     }
 
     renderInput () {

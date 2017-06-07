@@ -207,6 +207,13 @@ describe('<ValidatorForm>', function () {
                     this.app.find('Form').node
                 ]);
 
+                this.app.node.reset();
+
+                return nextTick();
+            })
+            .then(() => {
+                assert(this.onSubmit.calledOnce, 'onSubmit should be called');
+                assert(validate.calledTwice);
             });
     });
 

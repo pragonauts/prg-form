@@ -90,6 +90,13 @@ var ValidatorForm = function (_Component) {
             return this.form.getValues();
         }
     }, {
+        key: 'reset',
+        value: function reset() {
+            var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+
+            this.form.reset(data);
+        }
+    }, {
         key: 'render',
         value: function render() {
             var _this3 = this;
@@ -106,8 +113,8 @@ var ValidatorForm = function (_Component) {
                     onSubmit: function onSubmit(data, form) {
                         return _this3.onSubmit(data, form);
                     },
-                    onChange: function onChange(data, form) {
-                        return _this3.onChange(data, form);
+                    onChange: function onChange(data) {
+                        return _this3.onChange(data);
                     },
                     ref: function ref(el) {
                         _this3.form = el;

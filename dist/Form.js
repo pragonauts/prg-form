@@ -97,6 +97,21 @@ var Form = function (_Component) {
             });
         }
     }, {
+        key: 'reset',
+        value: function reset() {
+            var _this4 = this;
+
+            var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+
+            this.inputs.forEach(function (input, name) {
+                if (data !== null) {
+                    input.resetValue((0, _path.getValue)(_this4.props.values, name));
+                } else {
+                    input.resetValue();
+                }
+            });
+        }
+    }, {
         key: 'inputWillMount',
         value: function inputWillMount(input) {
             this.inputs.set(input.name, input);
@@ -110,7 +125,7 @@ var Form = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            var _this4 = this;
+            var _this5 = this;
 
             var _props = this.props,
                 children = _props.children,
@@ -120,7 +135,7 @@ var Form = function (_Component) {
                 'form',
                 {
                     onSubmit: function onSubmit(e) {
-                        return _this4.onSubmit(e);
+                        return _this5.onSubmit(e);
                     },
                     className: className
                 },

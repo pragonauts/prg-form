@@ -62,10 +62,11 @@ class File extends BaseInput {
                 this.element.value = '';
             }
 
-            if (this.context.onChangeInput) {
+            if (this.context.onChangeInput && !this.inReset) {
                 this.context.onChangeInput(this);
             }
         }
+        this.inReset = false;
     }
 
     setValue (value) {
@@ -96,7 +97,8 @@ class File extends BaseInput {
         const val = this.setValue(newValue);
         this.props.onChange(val, this);
         if (this.context.onChangeInput
-            && val === this.state.value) {
+            && val === this.state.value
+            && !this.inReset) {
 
             this.context.onChangeInput(this);
         }
