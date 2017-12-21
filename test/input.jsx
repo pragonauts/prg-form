@@ -56,8 +56,7 @@ function setValue (app, selector, value) {
                 />
             );
 
-            assert.equal(app.find('p.control').length, 1, 'There should be one p.control');
-            assert.equal(app.find('div.control').length, 0, 'There should be no div.control');
+            assert.equal(app.find('div.control').length, 1, 'There should be one div.control');
             assert(app.childAt(0).is(inputSelector), `Elem not matches ${inputSelector}`);
         });
 
@@ -127,7 +126,7 @@ function setValue (app, selector, value) {
                 />
             );
 
-            assert.equal(app.find('p.control').length, 1, 'There should be one p.control');
+            assert.equal(app.find('div.control').length, 1, 'There should be one div.control');
             assert.equal(app.find('label').text(), 'Foo', 'There should be a label');
             assert.strictEqual(app.find(inputSelector).length, 1, `Elem not matches ${inputSelector}`);
         });
@@ -297,7 +296,7 @@ function setValue (app, selector, value) {
                 />
             );
 
-            const input = app.find('p.control');
+            const input = app.find('div.control');
 
             assert(input.hasClass('container'));
         });

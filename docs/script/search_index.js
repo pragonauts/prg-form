@@ -36,6 +36,12 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
+    "prg-form/src/spinner.jsx~spinner",
+    "function/index.html#static-function-Spinner",
+    "<span>Spinner</span> <span class=\"search-result-import-path\">prg-form/src/Spinner.jsx</span>",
+    "function"
+  ],
+  [
     "prg-form/src/textarea.jsx~textarea",
     "class/src/TextArea.jsx~TextArea.html",
     "<span>TextArea</span> <span class=\"search-result-import-path\">prg-form/src/TextArea.jsx</span>",
@@ -471,6 +477,12 @@ window.esdocSearchIndex = [
     "src/reactselectwrapper.jsx",
     "file/src/ReactSelectWrapper.jsx.html",
     "src/ReactSelectWrapper.jsx",
+    "file"
+  ],
+  [
+    "src/spinner.jsx",
+    "file/src/Spinner.jsx.html",
+    "src/Spinner.jsx",
     "file"
   ],
   [

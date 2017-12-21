@@ -39,10 +39,50 @@ import LabeledControl from './LabeledControl';
  */
 class ReactSelectWrapper extends BaseInput {
 
+    onChange (value) {
+        let val;
+        if (Array.isArray(value)) {
+            val = value.map(v => v.value);
+        } else if (value !== null && typeof value === 'object') {
+            val = value.value;
+        } else {
+            val = value;
+        }
+        val = this.setValue(val);
+        this.props.onChange(val, this);
+    }
+
+    setValue (value) {
+        let set;
+        if (value === null || typeof value === 'undefined') {
+            set = this.props.defaultValue;
+        } else {
+            set = value;
+        }
+        if (this.mounted) {
+            this.setState({ value: set });
+        }
+        return set;
+    }
+
+    _getOptions () {
+        const { value } = this.state;
+        const { options, multi } = this.props;
+
+        if (options) {
+            return options;
+        } else if (multi && Array.isArray(value)) {
+            return value.map(v => ({ value: v, label: v }));
+        } else if (!multi && typeof value !== 'object') {
+            return [{ value, label: `${value}` }];
+        }
+        return [];
+    }
+
     renderInput () {
         const { disabled, name, placeholder, required, readOnly, autofocus } = this.props;
         const { value } = this.state;
-        const { Component, options } = this.props;
+        const { Component } = this.props;
 
         const setProps = Object.assign({}, this.props);
 
@@ -63,7 +103,7 @@ class ReactSelectWrapper extends BaseInput {
             required={required}
             readOnly={readOnly}
             value={value}
-            options={options}
+            options={this._getOptions()}
         />);
     }
 
@@ -86,13 +126,15 @@ class ReactSelectWrapper extends BaseInput {
 
 ReactSelectWrapper.propTypes = Object.assign({}, BaseInput.propTypes, {
     Component: PropTypes.oneOfType([PropTypes.object, PropTypes.func]).isRequired,
-    options: PropTypes.arrayOf(PropTypes.object)
+    options: PropTypes.arrayOf(PropTypes.object),
+    multi: PropTypes.bool
 });
 
 ReactSelectWrapper.defaultProps = Object.assign({}, BaseInput.defaultProps, {
     type: 'select',
-    defaultInputClass: 'select',
-    options: []
+    defaultInputClass: '',
+    options: null,
+    multi: false
 });
 
 export default ReactSelectWrapper;

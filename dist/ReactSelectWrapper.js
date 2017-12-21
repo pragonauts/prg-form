@@ -6,6 +6,8 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require('react');
@@ -42,21 +44,69 @@ var ReactSelectWrapper = function (_BaseInput) {
     }
 
     _createClass(ReactSelectWrapper, [{
+        key: 'onChange',
+        value: function onChange(value) {
+            var val = void 0;
+            if (Array.isArray(value)) {
+                val = value.map(function (v) {
+                    return v.value;
+                });
+            } else if (value !== null && (typeof value === 'undefined' ? 'undefined' : _typeof(value)) === 'object') {
+                val = value.value;
+            } else {
+                val = value;
+            }
+            val = this.setValue(val);
+            this.props.onChange(val, this);
+        }
+    }, {
+        key: 'setValue',
+        value: function setValue(value) {
+            var set = void 0;
+            if (value === null || typeof value === 'undefined') {
+                set = this.props.defaultValue;
+            } else {
+                set = value;
+            }
+            if (this.mounted) {
+                this.setState({ value: set });
+            }
+            return set;
+        }
+    }, {
+        key: '_getOptions',
+        value: function _getOptions() {
+            var value = this.state.value;
+            var _props = this.props,
+                options = _props.options,
+                multi = _props.multi;
+
+
+            if (options) {
+                return options;
+            } else if (multi && Array.isArray(value)) {
+                return value.map(function (v) {
+                    return { value: v, label: v };
+                });
+            } else if (!multi && (typeof value === 'undefined' ? 'undefined' : _typeof(value)) !== 'object') {
+                return [{ value: value, label: '' + value }];
+            }
+            return [];
+        }
+    }, {
         key: 'renderInput',
         value: function renderInput() {
             var _this2 = this;
 
-            var _props = this.props,
-                disabled = _props.disabled,
-                name = _props.name,
-                placeholder = _props.placeholder,
-                required = _props.required,
-                readOnly = _props.readOnly,
-                autofocus = _props.autofocus;
-            var value = this.state.value;
             var _props2 = this.props,
-                Component = _props2.Component,
-                options = _props2.options;
+                disabled = _props2.disabled,
+                name = _props2.name,
+                placeholder = _props2.placeholder,
+                required = _props2.required,
+                readOnly = _props2.readOnly,
+                autofocus = _props2.autofocus;
+            var value = this.state.value;
+            var Component = this.props.Component;
 
 
             var setProps = Object.assign({}, this.props);
@@ -85,7 +135,7 @@ var ReactSelectWrapper = function (_BaseInput) {
                 required: required,
                 readOnly: readOnly,
                 value: value,
-                options: options
+                options: this._getOptions()
             }));
         }
     }, {
@@ -114,13 +164,15 @@ var ReactSelectWrapper = function (_BaseInput) {
 
 ReactSelectWrapper.propTypes = Object.assign({}, _BaseInput3.default.propTypes, {
     Component: _propTypes2.default.oneOfType([_propTypes2.default.object, _propTypes2.default.func]).isRequired,
-    options: _propTypes2.default.arrayOf(_propTypes2.default.object)
+    options: _propTypes2.default.arrayOf(_propTypes2.default.object),
+    multi: _propTypes2.default.bool
 });
 
 ReactSelectWrapper.defaultProps = Object.assign({}, _BaseInput3.default.defaultProps, {
     type: 'select',
-    defaultInputClass: 'select',
-    options: []
+    defaultInputClass: '',
+    options: null,
+    multi: false
 });
 
 exports.default = ReactSelectWrapper;
