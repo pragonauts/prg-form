@@ -1,0 +1,10 @@
+{
+    "checkJs": true,
+    "allowSyntheticDefaultImports": true,
+    "compilerOptions": {
+        "target": "ES6"
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}

@@ -30,6 +30,12 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
+    "prg-form/src/reactselectwrapper.jsx~reactselectwrapper",
+    "class/src/ReactSelectWrapper.jsx~ReactSelectWrapper.html",
+    "<span>ReactSelectWrapper</span> <span class=\"search-result-import-path\">prg-form/src/ReactSelectWrapper.jsx</span>",
+    "class"
+  ],
+  [
     "prg-form/src/textarea.jsx~textarea",
     "class/src/TextArea.jsx~TextArea.html",
     "<span>TextArea</span> <span class=\"search-result-import-path\">prg-form/src/TextArea.jsx</span>",
@@ -459,6 +465,12 @@ window.esdocSearchIndex = [
     "src/labeledcontrol.jsx",
     "file/src/LabeledControl.jsx.html",
     "src/LabeledControl.jsx",
+    "file"
+  ],
+  [
+    "src/reactselectwrapper.jsx",
+    "file/src/ReactSelectWrapper.jsx.html",
+    "src/ReactSelectWrapper.jsx",
     "file"
   ],
   [

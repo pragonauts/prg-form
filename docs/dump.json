@@ -1868,7 +1868,7 @@
     "examples": [
       "<Input\n    name=\"inputName\"\n    type=\"email\"\n    iconBefore={<i className=\"fa fa-meetup\" />}\n/>"
     ],
-    "lineNumber": 44,
+    "lineNumber": 43,
     "unknown": [
       {
         "tagName": "@class",
@@ -1930,6 +1930,119 @@
   {
     "__docId__": 75,
     "kind": "file",
+    "name": "src/ReactSelectWrapper.jsx",
+    "content": "",
+    "static": true,
+    "longname": "src/ReactSelectWrapper.jsx",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 76,
+    "kind": "class",
+    "name": "ReactSelectWrapper",
+    "memberof": "src/ReactSelectWrapper.jsx",
+    "static": true,
+    "longname": "src/ReactSelectWrapper.jsx~ReactSelectWrapper",
+    "access": null,
+    "export": true,
+    "importPath": "prg-form/src/ReactSelectWrapper.jsx",
+    "importStyle": "ReactSelectWrapper",
+    "description": "Wrapper for React Select\n\n## PropTypes\n\n| property | type | type signature | description |\n|----------|------|----------------|-------------|\n| `name` | `string` | **required** | input name (you can use dots and array indexes)\n| `Component` | `<Select>` | **required** | react select component\n| `label` | `string` | | input label\n| `className` | `string` | | input class\n| `controlClass` | `string` | | surrounding paragraph class\n| `defaultValue` | `any` | | is used, when input value is falsey\n| `value` | `any` | | use, when input is operated outside `<Form>`\n| `onChange` | `function` | `(value, input) => {}` | fired, when input is changed\n| `disabled` | `boolean` | | disable input\n| `readOnly` | `boolean` | | only read\n| `required` | `boolean` | | input is required - HTML attribute",
+    "examples": [
+      "import Select from 'react-select';\n\n<ReactSelectWrapper\n    name=\"someSelect\"\n    Component={Select}\n/>"
+    ],
+    "lineNumber": 40,
+    "unknown": [
+      {
+        "tagName": "@class",
+        "tagValue": "Checkbox"
+      }
+    ],
+    "interface": false,
+    "extends": [
+      "BaseInput"
+    ]
+  },
+  {
+    "__docId__": 77,
+    "kind": "method",
+    "name": "renderInput",
+    "memberof": "src/ReactSelectWrapper.jsx~ReactSelectWrapper",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/ReactSelectWrapper.jsx~ReactSelectWrapper#renderInput",
+    "access": null,
+    "description": null,
+    "lineNumber": 42,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 78,
+    "kind": "member",
+    "name": "element",
+    "memberof": "src/ReactSelectWrapper.jsx~ReactSelectWrapper",
+    "static": false,
+    "longname": "src/ReactSelectWrapper.jsx~ReactSelectWrapper#element",
+    "access": null,
+    "description": null,
+    "lineNumber": 61,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 79,
+    "kind": "method",
+    "name": "render",
+    "memberof": "src/ReactSelectWrapper.jsx~ReactSelectWrapper",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/ReactSelectWrapper.jsx~ReactSelectWrapper#render",
+    "access": null,
+    "description": null,
+    "lineNumber": 68,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 80,
+    "kind": "file",
     "name": "src/TextArea.jsx",
     "content": "",
     "static": true,
@@ -1939,7 +2052,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 76,
+    "__docId__": 81,
     "kind": "class",
     "name": "TextArea",
     "memberof": "src/TextArea.jsx",
@@ -1966,7 +2079,7 @@
     ]
   },
   {
-    "__docId__": 77,
+    "__docId__": 82,
     "kind": "method",
     "name": "renderInput",
     "memberof": "src/TextArea.jsx~TextArea",
@@ -1992,7 +2105,7 @@
     }
   },
   {
-    "__docId__": 78,
+    "__docId__": 83,
     "kind": "member",
     "name": "element",
     "memberof": "src/TextArea.jsx~TextArea",
@@ -2015,7 +2128,7 @@
     }
   },
   {
-    "__docId__": 79,
+    "__docId__": 84,
     "kind": "file",
     "name": "src/ValidatorForm.jsx",
     "content": "",
@@ -2026,7 +2139,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 80,
+    "__docId__": 85,
     "kind": "class",
     "name": "ValidatorForm",
     "memberof": "src/ValidatorForm.jsx",
@@ -2053,7 +2166,7 @@
     ]
   },
   {
-    "__docId__": 81,
+    "__docId__": 86,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/ValidatorForm.jsx~ValidatorForm",
@@ -2081,7 +2194,7 @@
     ]
   },
   {
-    "__docId__": 82,
+    "__docId__": 87,
     "kind": "member",
     "name": "form",
     "memberof": "src/ValidatorForm.jsx~ValidatorForm",
@@ -2104,7 +2217,7 @@
     }
   },
   {
-    "__docId__": 83,
+    "__docId__": 88,
     "kind": "method",
     "name": "onChange",
     "memberof": "src/ValidatorForm.jsx~ValidatorForm",
@@ -2132,7 +2245,7 @@
     ]
   },
   {
-    "__docId__": 84,
+    "__docId__": 89,
     "kind": "method",
     "name": "onSubmit",
     "memberof": "src/ValidatorForm.jsx~ValidatorForm",
@@ -2166,7 +2279,7 @@
     ]
   },
   {
-    "__docId__": 85,
+    "__docId__": 90,
     "kind": "method",
     "name": "getValues",
     "memberof": "src/ValidatorForm.jsx~ValidatorForm",
@@ -2198,7 +2311,7 @@
     }
   },
   {
-    "__docId__": 86,
+    "__docId__": 91,
     "kind": "method",
     "name": "reset",
     "memberof": "src/ValidatorForm.jsx~ValidatorForm",
@@ -2232,7 +2345,7 @@
     ]
   },
   {
-    "__docId__": 87,
+    "__docId__": 92,
     "kind": "method",
     "name": "render",
     "memberof": "src/ValidatorForm.jsx~ValidatorForm",
@@ -2258,7 +2371,7 @@
     }
   },
   {
-    "__docId__": 88,
+    "__docId__": 93,
     "kind": "member",
     "name": "form",
     "memberof": "src/ValidatorForm.jsx~ValidatorForm",
@@ -2281,7 +2394,7 @@
     }
   },
   {
-    "__docId__": 89,
+    "__docId__": 94,
     "kind": "file",
     "name": "src/main.js",
     "content": "",
@@ -2292,7 +2405,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 90,
+    "__docId__": 95,
     "kind": "file",
     "name": "src/path.js",
     "content": "",
@@ -2303,7 +2416,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 91,
+    "__docId__": 96,
     "kind": "function",
     "name": "pathToDots",
     "memberof": "src/path.js",
@@ -2339,7 +2452,7 @@
     }
   },
   {
-    "__docId__": 92,
+    "__docId__": 97,
     "kind": "function",
     "name": "shallowDiff",
     "memberof": "src/path.js",
@@ -2381,7 +2494,7 @@
     }
   },
   {
-    "__docId__": 93,
+    "__docId__": 98,
     "kind": "function",
     "name": "createTree",
     "memberof": "src/path.js",
@@ -2432,7 +2545,7 @@
     }
   },
   {
-    "__docId__": 94,
+    "__docId__": 99,
     "kind": "function",
     "name": "shallowToDeep",
     "memberof": "src/path.js",
@@ -2468,7 +2581,7 @@
     }
   },
   {
-    "__docId__": 95,
+    "__docId__": 100,
     "kind": "function",
     "name": "pathToFormBrackets",
     "memberof": "src/path.js",
@@ -2504,7 +2617,7 @@
     }
   },
   {
-    "__docId__": 96,
+    "__docId__": 101,
     "kind": "function",
     "name": "flat",
     "memberof": "src/path.js",
@@ -2561,7 +2674,7 @@
     }
   },
   {
-    "__docId__": 97,
+    "__docId__": 102,
     "kind": "function",
     "name": "getValue",
     "memberof": "src/path.js",
@@ -2603,7 +2716,7 @@
     }
   },
   {
-    "__docId__": 98,
+    "__docId__": 103,
     "kind": "function",
     "name": "join",
     "memberof": "src/path.js",
@@ -2639,7 +2752,7 @@
     }
   },
   {
-    "__docId__": 100,
+    "__docId__": 105,
     "kind": "external",
     "name": "Infinity",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
@@ -2651,7 +2764,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 101,
+    "__docId__": 106,
     "kind": "external",
     "name": "NaN",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
@@ -2663,7 +2776,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 102,
+    "__docId__": 107,
     "kind": "external",
     "name": "undefined",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
@@ -2675,7 +2788,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 103,
+    "__docId__": 108,
     "kind": "external",
     "name": "null",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
@@ -2687,7 +2800,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 104,
+    "__docId__": 109,
     "kind": "external",
     "name": "Object",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
@@ -2699,7 +2812,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 105,
+    "__docId__": 110,
     "kind": "external",
     "name": "object",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
@@ -2711,7 +2824,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 106,
+    "__docId__": 111,
     "kind": "external",
     "name": "Function",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
@@ -2723,7 +2836,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 107,
+    "__docId__": 112,
     "kind": "external",
     "name": "function",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
@@ -2735,7 +2848,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 108,
+    "__docId__": 113,
     "kind": "external",
     "name": "Boolean",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
@@ -2747,7 +2860,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 109,
+    "__docId__": 114,
     "kind": "external",
     "name": "boolean",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
@@ -2759,7 +2872,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 110,
+    "__docId__": 115,
     "kind": "external",
     "name": "Symbol",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
@@ -2771,7 +2884,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 111,
+    "__docId__": 116,
     "kind": "external",
     "name": "Error",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
@@ -2783,7 +2896,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 112,
+    "__docId__": 117,
     "kind": "external",
     "name": "EvalError",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
@@ -2795,7 +2908,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 113,
+    "__docId__": 118,
     "kind": "external",
     "name": "InternalError",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
@@ -2807,7 +2920,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 114,
+    "__docId__": 119,
     "kind": "external",
     "name": "RangeError",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
@@ -2819,7 +2932,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 115,
+    "__docId__": 120,
     "kind": "external",
     "name": "ReferenceError",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
@@ -2831,7 +2944,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 116,
+    "__docId__": 121,
     "kind": "external",
     "name": "SyntaxError",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
@@ -2843,7 +2956,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 117,
+    "__docId__": 122,
     "kind": "external",
     "name": "TypeError",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
@@ -2855,7 +2968,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 118,
+    "__docId__": 123,
     "kind": "external",
     "name": "URIError",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
@@ -2867,7 +2980,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 119,
+    "__docId__": 124,
     "kind": "external",
     "name": "Number",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
@@ -2879,7 +2992,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 120,
+    "__docId__": 125,
     "kind": "external",
     "name": "number",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
@@ -2891,7 +3004,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 121,
+    "__docId__": 126,
     "kind": "external",
     "name": "Date",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
@@ -2903,7 +3016,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 122,
+    "__docId__": 127,
     "kind": "external",
     "name": "String",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
@@ -2915,7 +3028,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 123,
+    "__docId__": 128,
     "kind": "external",
     "name": "string",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
@@ -2927,7 +3040,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 124,
+    "__docId__": 129,
     "kind": "external",
     "name": "RegExp",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
@@ -2939,7 +3052,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 125,
+    "__docId__": 130,
     "kind": "external",
     "name": "Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
@@ -2951,7 +3064,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 126,
+    "__docId__": 131,
     "kind": "external",
     "name": "Int8Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
@@ -2963,7 +3076,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 127,
+    "__docId__": 132,
     "kind": "external",
     "name": "Uint8Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
@@ -2975,7 +3088,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 128,
+    "__docId__": 133,
     "kind": "external",
     "name": "Uint8ClampedArray",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
@@ -2987,7 +3100,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 129,
+    "__docId__": 134,
     "kind": "external",
     "name": "Int16Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
@@ -2999,7 +3112,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 130,
+    "__docId__": 135,
     "kind": "external",
     "name": "Uint16Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
@@ -3011,7 +3124,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 131,
+    "__docId__": 136,
     "kind": "external",
     "name": "Int32Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
@@ -3023,7 +3136,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 132,
+    "__docId__": 137,
     "kind": "external",
     "name": "Uint32Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
@@ -3035,7 +3148,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 133,
+    "__docId__": 138,
     "kind": "external",
     "name": "Float32Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
@@ -3047,7 +3160,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 134,
+    "__docId__": 139,
     "kind": "external",
     "name": "Float64Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
@@ -3059,7 +3172,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 135,
+    "__docId__": 140,
     "kind": "external",
     "name": "Map",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
@@ -3071,7 +3184,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 136,
+    "__docId__": 141,
     "kind": "external",
     "name": "Set",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
@@ -3083,7 +3196,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 137,
+    "__docId__": 142,
     "kind": "external",
     "name": "WeakMap",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
@@ -3095,7 +3208,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 138,
+    "__docId__": 143,
     "kind": "external",
     "name": "WeakSet",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
@@ -3107,7 +3220,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 139,
+    "__docId__": 144,
     "kind": "external",
     "name": "ArrayBuffer",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
@@ -3119,7 +3232,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 140,
+    "__docId__": 145,
     "kind": "external",
     "name": "DataView",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
@@ -3131,7 +3244,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 141,
+    "__docId__": 146,
     "kind": "external",
     "name": "JSON",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
@@ -3143,7 +3256,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 142,
+    "__docId__": 147,
     "kind": "external",
     "name": "Promise",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
@@ -3155,7 +3268,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 143,
+    "__docId__": 148,
     "kind": "external",
     "name": "Generator",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
@@ -3167,7 +3280,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 144,
+    "__docId__": 149,
     "kind": "external",
     "name": "GeneratorFunction",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
@@ -3179,7 +3292,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 145,
+    "__docId__": 150,
     "kind": "external",
     "name": "Reflect",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
@@ -3191,7 +3304,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 146,
+    "__docId__": 151,
     "kind": "external",
     "name": "Proxy",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
@@ -3204,7 +3317,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 148,
+    "__docId__": 153,
     "kind": "external",
     "name": "CanvasRenderingContext2D",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D",
@@ -3216,7 +3329,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 149,
+    "__docId__": 154,
     "kind": "external",
     "name": "DocumentFragment",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment",
@@ -3228,7 +3341,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 150,
+    "__docId__": 155,
     "kind": "external",
     "name": "Element",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Element",
@@ -3240,7 +3353,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 151,
+    "__docId__": 156,
     "kind": "external",
     "name": "Event",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Event",
@@ -3252,7 +3365,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 152,
+    "__docId__": 157,
     "kind": "external",
     "name": "Node",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Node",
@@ -3264,7 +3377,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 153,
+    "__docId__": 158,
     "kind": "external",
     "name": "NodeList",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/NodeList",
@@ -3276,7 +3389,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 154,
+    "__docId__": 159,
     "kind": "external",
     "name": "XMLHttpRequest",
     "externalLink": "https://developer.mozilla.org/en/docs/Web/API/XMLHttpRequest",
@@ -3288,7 +3401,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 155,
+    "__docId__": 160,
     "kind": "external",
     "name": "AudioContext",
     "externalLink": "https://developer.mozilla.org/en/docs/Web/API/AudioContext",

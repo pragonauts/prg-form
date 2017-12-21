@@ -23,7 +23,7 @@ function Control(_ref) {
         controlClass += ' ' + className;
     }
     return _react2.default.createElement(
-        'p',
+        'div',
         { className: controlClass },
         children
     );

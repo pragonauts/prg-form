@@ -2,7 +2,6 @@
  * @author David Menger
  */
 
-// import React, { PropTypes } from 'react';
 import BaseInput from './BaseInput';
 
 

@@ -6,10 +6,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { assert } from 'chai';
 import { mount } from 'enzyme';
+import Select from 'react-select';
 import Input from '../src/Input';
 import Checkbox from '../src/Checkbox';
 import TextArea from '../src/TextArea';
 import File from '../src/File';
+import ReactSelectWrapper from '../src/ReactSelectWrapper';
 
 function setValue (app, selector, value) {
     const input = app.find(selector);
@@ -30,7 +32,18 @@ function setValue (app, selector, value) {
     { Elem: File, inputSelector: 'input.file', fooValue: null, barValue: {}, valueProp: 'filename', args: {} },
     { Elem: File, inputSelector: 'input.file', fooValue: [], barValue: [], valueProp: 'filename', args: { multiple: true }, name: 'name[]' },
     { Elem: Checkbox, inputSelector: 'input.checkbox', fooValue: true, barValue: false, valueProp: 'checked' },
-    { Elem: TextArea, inputSelector: 'textarea' }
+    { Elem: TextArea, inputSelector: 'textarea' },
+    {
+        Elem: ReactSelectWrapper,
+        inputSelector: 'Select',
+        args: {
+            Component: Select,
+            options: [
+                { value: 'one', label: 'One' },
+                { value: 'two', label: 'Two' }
+            ]
+        }
+    }
 ].forEach(({ Elem, inputSelector, fooValue = 'foo', barValue = 'bar', valueProp = 'value', args = {}, name = 'name' }) => {
 
     describe(`<${Elem.name}>`, function () {
@@ -119,57 +132,59 @@ function setValue (app, selector, value) {
             assert.strictEqual(app.find(inputSelector).length, 1, `Elem not matches ${inputSelector}`);
         });
 
-        it('element fires onChange event', function () {
-            const onChange = sinon.spy();
+        if (Elem !== ReactSelectWrapper) {
+            it('element fires onChange event', function () {
+                const onChange = sinon.spy();
 
-            const app = mount(
-                <Elem
-                    name="name"
-                    onChange={onChange}
-                    value={fooValue}
-                    {...args}
-                />
-            );
+                const app = mount(
+                    <Elem
+                        name="name"
+                        onChange={onChange}
+                        value={fooValue}
+                        {...args}
+                    />
+                );
 
-            app.find(inputSelector).simulate('change');
+                app.find(inputSelector).simulate('change');
 
-            assert(onChange.calledOnce, 'object');
-            assert.deepEqual(onChange.firstCall.args, [fooValue, app.node], 'name');
-        });
+                assert(onChange.calledOnce, 'object');
+                assert.deepEqual(onChange.firstCall.args, [fooValue, app.node], 'name');
+            });
 
-        it('element fires onFocus event', function () {
-            const onFocus = sinon.spy();
+            it('element fires onFocus event', function () {
+                const onFocus = sinon.spy();
 
-            const app = mount(
-                <Elem
-                    name="name"
-                    onFocus={onFocus}
-                    {...args}
-                />
-            );
+                const app = mount(
+                    <Elem
+                        name="name"
+                        onFocus={onFocus}
+                        {...args}
+                    />
+                );
 
-            app.find(inputSelector).simulate('focus');
+                app.find(inputSelector).simulate('focus');
 
-            assert(onFocus.calledOnce, 'object');
-            assert.deepEqual(onFocus.firstCall.args, [app.node], 'name');
-        });
+                assert(onFocus.calledOnce, 'object');
+                assert.deepEqual(onFocus.firstCall.args, [app.node], 'name');
+            });
 
-        it('element fires onBlur event', function () {
-            const onBlur = sinon.spy();
+            it('element fires onBlur event', function () {
+                const onBlur = sinon.spy();
 
-            const app = mount(
-                <Elem
-                    name="name"
-                    onBlur={onBlur}
-                    {...args}
-                />
-            );
+                const app = mount(
+                    <Elem
+                        name="name"
+                        onBlur={onBlur}
+                        {...args}
+                    />
+                );
 
-            app.find(inputSelector).simulate('blur');
+                app.find(inputSelector).simulate('blur');
 
-            assert(onBlur.calledOnce, 'object');
-            assert.deepEqual(onBlur.firstCall.args, [app.node], 'name');
-        });
+                assert(onBlur.calledOnce, 'object');
+                assert.deepEqual(onBlur.firstCall.args, [app.node], 'name');
+            });
+        }
 
         if (Elem === File) {
 
@@ -209,7 +224,7 @@ function setValue (app, selector, value) {
             });
 
 
-        } else {
+        } else if (Elem !== ReactSelectWrapper) {
             it('should display value, when its set', function () {
                 const app = mount(
                     <Elem
@@ -374,16 +389,20 @@ function setValue (app, selector, value) {
 
             // after data change
             assert(inputWillMount.calledOnce, 'input should not remount');
-            assert(onChangeInput.calledOnce, 'onchange should be fired');
+            if (Elem !== ReactSelectWrapper) {
+                assert(onChangeInput.calledOnce, 'onchange should be fired');
+                assert.deepEqual(onChangeInput.firstCall.args, [app.node]);
+            }
             assert(!inputWillUnmount.called, 'unmount should not be called');
 
-            assert.deepEqual(onChangeInput.firstCall.args, [app.node]);
 
             // after unmount
             app.unmount();
 
             assert(inputWillMount.calledOnce);
-            assert(onChangeInput.calledOnce);
+            if (Elem !== ReactSelectWrapper) {
+                assert(onChangeInput.calledOnce);
+            }
             assert(inputWillUnmount.calledOnce);
 
             assert.deepEqual(inputWillUnmount.firstCall.args, [app.node]);

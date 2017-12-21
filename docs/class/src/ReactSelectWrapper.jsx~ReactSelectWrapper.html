@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../">
-  <title data-ice="title">File | Prg Form API Document</title>
+  <title data-ice="title">ReactSelectWrapper | Prg Form API Document</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -46,23 +46,23 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import File from &apos;<span><a href="file/src/File.jsx.html#lineNumber47">prg-form/src/File.jsx</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import ReactSelectWrapper from &apos;<span><a href="file/src/ReactSelectWrapper.jsx.html#lineNumber40">prg-form/src/ReactSelectWrapper.jsx</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/src/File.jsx.html#lineNumber47">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/src/ReactSelectWrapper.jsx.html#lineNumber40">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
-  <h1 data-ice="name">File</h1>
+  <h1 data-ice="name">ReactSelectWrapper</h1>
 
   
 
   
   
-  <div class="flat-list" data-ice="extendsChain"><h4>Extends:</h4><div><span>Component</span> &#x2192; <span><a href="class/src/BaseInput.jsx~BaseInput.html">BaseInput</a></span> &#x2192; File</div></div>
+  <div class="flat-list" data-ice="extendsChain"><h4>Extends:</h4><div><span>Component</span> &#x2192; <span><a href="class/src/BaseInput.jsx~BaseInput.html">BaseInput</a></span> &#x2192; ReactSelectWrapper</div></div>
   
   
   
@@ -72,8 +72,7 @@
 
   
   
-  <div class="description" data-ice="description"><p>File upload component
-In addition to {BaseInput} has theese props:</p>
+  <div class="description" data-ice="description"><p>Wrapper for React Select</p>
 <h2 id="proptypes">PropTypes</h2>
 <table>
 <thead>
@@ -90,6 +89,12 @@ In addition to {BaseInput} has theese props:</p>
 <td><code>string</code></td>
 <td><strong>required</strong></td>
 <td>input name (you can use dots and array indexes)</td>
+</tr>
+<tr>
+<td><code>Component</code></td>
+<td><code>&lt;Select&gt;</code></td>
+<td><strong>required</strong></td>
+<td>react select component</td>
 </tr>
 <tr>
 <td><code>label</code></td>
@@ -110,6 +115,12 @@ In addition to {BaseInput} has theese props:</p>
 <td>surrounding paragraph class</td>
 </tr>
 <tr>
+<td><code>defaultValue</code></td>
+<td><code>any</code></td>
+<td></td>
+<td>is used, when input value is falsey</td>
+</tr>
+<tr>
 <td><code>value</code></td>
 <td><code>any</code></td>
 <td></td>
@@ -122,34 +133,22 @@ In addition to {BaseInput} has theese props:</p>
 <td>fired, when input is changed</td>
 </tr>
 <tr>
-<td><code>onFocus</code></td>
-<td><code>function</code></td>
-<td><code>(input) =&gt; {}</code></td>
-<td>fired, when input is focused</td>
+<td><code>disabled</code></td>
+<td><code>boolean</code></td>
+<td></td>
+<td>disable input</td>
 </tr>
 <tr>
-<td><code>onBlur</code></td>
-<td><code>function</code></td>
-<td><code>(input) =&gt; {}</code></td>
-<td>fired, when input is blured</td>
+<td><code>readOnly</code></td>
+<td><code>boolean</code></td>
+<td></td>
+<td>only read</td>
 </tr>
 <tr>
 <td><code>required</code></td>
 <td><code>boolean</code></td>
 <td></td>
 <td>input is required - HTML attribute</td>
-</tr>
-<tr>
-<td><code>iconBefore</code></td>
-<td><code>any</code></td>
-<td></td>
-<td>content shown before input</td>
-</tr>
-<tr>
-<td><code>multiple</code></td>
-<td><code>boolean</code></td>
-<td></td>
-<td>allows to set more files - the value will be an array</td>
 </tr>
 </tbody>
 </table>
@@ -163,18 +162,11 @@ In addition to {BaseInput} has theese props:</p>
     
   <div class="example-doc" data-ice="exampleDoc">
       
-      <pre class="prettyprint source-code"><code data-ice="exampleCode">// as single file
-&lt;File
-    name=&quot;inputName&quot;
-    iconBefore={&lt;i className=&quot;fa fa-meetup&quot; /&gt;}
-    onChange={(file) =&gt; file instanceof File} // native File object
-/&gt;
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">import Select from &apos;react-select&apos;;
 
-// as multiple files files
-&lt;File
-    name=&quot;inputName[]&quot; // do not forget to use with brackets
-    iconBefore={&lt;i className=&quot;fa fa-meetup&quot; /&gt;}
-    onChange={(files) =&gt; Array.isArray(files) &amp;&amp; files[0] instanceof File} // native File object
+&lt;ReactSelectWrapper
+    name=&quot;someSelect&quot;
+    Component={Select}
 /&gt;</code></pre>
     </div>
 </div>

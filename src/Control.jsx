@@ -10,9 +10,9 @@ function Control ({ className, children }) {
     if (className) {
         controlClass += ` ${className}`;
     }
-    return (<p className={controlClass}>
+    return (<div className={controlClass}>
         {children}
-    </p>);
+    </div>);
 }
 
 Control.propTypes = {

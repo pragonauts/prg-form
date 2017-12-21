@@ -1,6 +1,6 @@
 {
   "name": "prg-form",
-  "version": "0.3.0",
+  "version": "0.5.0-alpha.1",
   "description": "React Form Components For Bulma",
   "main": "dist/main.js",
   "scripts": {
@@ -71,6 +71,7 @@
     "react": "^15.5.4",
     "react-addons-test-utils": "^15.5.1",
     "react-dom": "^15.5.4",
+    "react-select": "^1.1.0",
     "react-test-renderer": "^15.5.4",
     "sinon": "^2.2.0",
     "webpack": "^2.5.1"
