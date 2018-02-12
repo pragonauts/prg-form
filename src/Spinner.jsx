@@ -11,16 +11,11 @@ const loading = '@keyframes r-bars-loading-animation {'
     + '40% { transform: scale(1); }'
     + '}';
 
-let styleSheet = document.styleSheets[0];
-
-if (!styleSheet) {
-    const head = document.head || document.getElementsByTagName('head')[0];
-    const style = document.createElement('style');
-    style.type = 'text/css';
-    head.appendChild(style);
-    styleSheet = style.sheet;
-}
-
+const head = document.head || document.getElementsByTagName('head')[0];
+const style = document.createElement('style');
+style.type = 'text/css';
+head.appendChild(style);
+const styleSheet = style.sheet;
 styleSheet.insertRule(loading, styleSheet.cssRules && styleSheet.cssRules.length);
 
 const styles = {

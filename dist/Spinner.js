@@ -16,16 +16,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var loading = '@keyframes r-bars-loading-animation {' + '0% { transform: scale(1); }' + '20% { transform: scale(1, 1.8); }' + '40% { transform: scale(1); }' + '}';
 
-var styleSheet = document.styleSheets[0];
-
-if (!styleSheet) {
-    var head = document.head || document.getElementsByTagName('head')[0];
-    var style = document.createElement('style');
-    style.type = 'text/css';
-    head.appendChild(style);
-    styleSheet = style.sheet;
-}
-
+var head = document.head || document.getElementsByTagName('head')[0];
+var style = document.createElement('style');
+style.type = 'text/css';
+head.appendChild(style);
+var styleSheet = style.sheet;
 styleSheet.insertRule(loading, styleSheet.cssRules && styleSheet.cssRules.length);
 
 var styles = {
