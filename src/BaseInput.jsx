@@ -29,6 +29,7 @@ import LabeledControl from './LabeledControl';
  * | `required` | `boolean` | | input is required - HTML attribute
  * | `maxLength` | `number` | | maximal length (only some inputs)
  * | `iconBefore` | `any`   | | content shown before input
+ * | `autoComplete` | `string` | | use "off" to disable autocomplete
  *
  * @class BaseInput
  * @extends {Component}
@@ -216,7 +217,9 @@ class BaseInput extends Component {
     }
 
     renderInput () {
-        const { type, disabled, placeholder, required, readOnly, maxLength } = this.props;
+        const {
+            type, disabled, placeholder, required, readOnly, maxLength, autoComplete
+        } = this.props;
         const { value } = this.state;
 
         return (<input
@@ -234,6 +237,7 @@ class BaseInput extends Component {
             required={required}
             readOnly={readOnly}
             maxLength={maxLength}
+            autoComplete={autoComplete}
         />);
     }
 
@@ -300,6 +304,7 @@ BaseInput.propTypes = {
     onChange: PropTypes.func,
     onBlur: PropTypes.func,
     onFocus: PropTypes.func,
+    autoComplete: PropTypes.string,
     maxLength: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 };
 
@@ -308,6 +313,7 @@ BaseInput.defaultProps = {
     defaultInputClass: 'input',
     label: null,
     defaultValue: '',
+    autoComplete: null,
     onChange: () => {},
     onBlur: () => {},
     onFocus: () => {},

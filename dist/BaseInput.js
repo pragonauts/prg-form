@@ -198,7 +198,8 @@ var BaseInput = function (_Component) {
                 placeholder = _props.placeholder,
                 required = _props.required,
                 readOnly = _props.readOnly,
-                maxLength = _props.maxLength;
+                maxLength = _props.maxLength,
+                autoComplete = _props.autoComplete;
             var value = this.state.value;
 
 
@@ -224,7 +225,8 @@ var BaseInput = function (_Component) {
                 },
                 required: required,
                 readOnly: readOnly,
-                maxLength: maxLength
+                maxLength: maxLength,
+                autoComplete: autoComplete
             });
         }
     }, {
@@ -308,6 +310,7 @@ BaseInput.propTypes = {
     onChange: _propTypes2.default.func,
     onBlur: _propTypes2.default.func,
     onFocus: _propTypes2.default.func,
+    autoComplete: _propTypes2.default.string,
     maxLength: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number])
 };
 
@@ -316,6 +319,7 @@ BaseInput.defaultProps = {
     defaultInputClass: 'input',
     label: null,
     defaultValue: '',
+    autoComplete: null,
     onChange: function onChange() {},
     onBlur: function onBlur() {},
     onFocus: function onFocus() {},
