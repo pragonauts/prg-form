@@ -1,6 +1,6 @@
 {
   "name": "prg-form",
-  "version": "0.5.4",
+  "version": "0.5.6",
   "description": "React Form Components For Bulma",
   "main": "dist/main.js",
   "scripts": {

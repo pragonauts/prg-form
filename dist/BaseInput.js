@@ -76,6 +76,9 @@ var BaseInput = function (_Component) {
         value: function componentWillReceiveProps(nextProps) {
             if (typeof nextProps.value !== 'undefined') {
                 this.setValue(nextProps.value);
+            } else if (this.props.defaultValue !== nextProps.defaultValue && (this.state.value === null || this.state.value === undefined || this.state.value === this.props.defaultValue)) {
+
+                this.setValue(nextProps.defaultValue);
             }
         }
     }, {
